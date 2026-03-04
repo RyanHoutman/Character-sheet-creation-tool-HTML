@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inventory A4</title>
+  <link rel="stylesheet" href="./A4.css">
+
+  <script src="scripts/styles.js"></script> 
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+  <div class="page">
+
+  	<div class=page_cutout
+  		style="
+			width: 20.4cm; 
+			height: 29.1cm;
+  		display: grid;
+  		grid-auto-flow: column;
+
+  		grid-row-gap: 1mm;
+  		grid-column-gap: 1mm;
+  	">
+
+			<!-- This is a box with the size of 16cm by 22cm -->
+			<shadow-box style="
+					height: 100%;
+					grid-template-columns: 7fr 7fr 8fr;
+				">
+				<!-- <div class=boxLabelInside>Adventuring Gear</div> -->
+
+				<column-container>
+					<!-- EQUIPMENT -->
+					<textbox-big>
+						<boxlabel-inside><b>Equipment</b><hr></boxlabel-inside>
+
+						<inventory-section height="high" emptyrows=3 header="PLACE_ITEM_ATTUNED" parser="PLACE" content="
+						Head
+						Neck
+						Cloak
+						Armour
+						Arms
+						Gloves
+						Ring
+						Ring
+						Ring
+						Belt
+						Boots"></inventory-section>
+					</textbox-big>
+
+					<!-- WEAPONS -->
+					<textbox-big>
+						<boxlabel-inside><b>Weapons</b><hr></boxlabel-inside>
+						<inventory-section height="high" header="PLACE_ITEM_COST_WEIGHT" emptyrows=8></inventory-section>
+					</textbox-big>
+
+					<!-- CLOTHES -->
+					<textbox-big>
+						<boxlabel-inside><b>Clothes</b><hr></boxlabel-inside>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=3 parser="ITEM_SKIP_COST_WEIGHT_SKIP" content="
+						Common Clothes
+						Adventuring Gear
+						5 SP
+						3 lb.
+						PHB'14
+						Fine Clothes
+						Adventuring Gear
+						15 GP
+						6 lb.
+						PHB'24
+						Traveler's Clothes
+						Adventuring Gear
+						2 GP
+						4 lb.
+						PHB'24"></inventory-section>
+					</textbox-big>
+					
+					<!-- BOOKS -->
+					<textbox-big>
+						<boxlabel-inside><b>Books, Maps and Scrolls</b><hr></boxlabel-inside>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=5></inventory-section>
+					</textbox-big>
+
+					<!-- MAGIC ITEMS -->
+					<textbox-big>
+						<boxlabel-inside><b>Magic Items</b><hr></boxlabel-inside>
+						<inventory-section height="high" emptyrows=10 header="BODY_BAG_ITEM_COST_WEIGHT" parser="" content=""></inventory-section>						
+					</textbox-big>
+
+					<!-- <shaded-text style="text-transform: none;">
+						1 gallon = 4 quarts.;	1 gallon = 8 pints;	1 gallon = 128 oz.;	1 gallon = 3.79 liters<br>
+						1 quart = 2 pints; 1 quart = 32 oz.; 1 quart = 0.94 liter;<br>
+						1 pint = 16 oz.; 1 pint = 0.47 liter; 1 oz. = 30ml;<br>
+						1 lb. = 16 oz.; 1 lb. = 0.45 kg; 1 oz. = 28.35 g
+						</shaded-text> -->
+					<style>
+						.conversion_table tr :is(th, td) {
+							font-family: helvetica;
+							font-size: 8px;
+							color: var(--darkgray);
+
+							text-align: center;
+							padding: 0 0.5mm;
+						}
+
+						.conversion_table {
+							width: max-content;
+							height: max-content;
+							table-layout: fixed;
+							border-collapse: collapse;
+						}
+
+						.conversion_table tr td:first-child {
+							font-weight: bold;
+						}
+					</style>
+					<div style="
+						/*grid-column: 1/3;*/
+						display: grid;
+						grid-template-columns: repeat(2, max-content);
+						grid-template-rows: repeat(2, max-content);
+						grid-row-gap: 1mm;
+						grid-column-gap: 1mm;
+						">
+						<table class=conversion_table style="grid-column: 1; grid-row: 1/-1;">
+						  <tr>
+						    <th></th>
+						    <th>gallon</th>
+						    <th>quart</th>
+						    <th>pint</th>
+						    <th>ounce</th>
+						  </tr>
+						  <tr>
+						    <td>quart</td>
+						    <td>4</td>
+						    <td>1</td>
+						    <td></td>
+						    <td></td>
+						  </tr>
+						  <tr>
+						    <td>pint</td>
+						    <td>8</td>
+						    <td>2</td>
+						    <td>1</td>
+						    <td></td>
+						  </tr>
+						  <tr>
+						    <td>ounce</td>
+						    <td>128</td>
+						    <td>32</td>
+						    <td>16</td>
+						    <td>1</td>
+						  </tr>
+						  <tr>
+						    <td>liter</td>
+						    <td>3.79</td>
+						    <td>0.94</td>
+						    <td>0.47</td>
+						    <td>0.03</td>
+						  </tr>
+						</table>
+
+						<table class=conversion_table style="grid-column: 2; grid-row: 1;">
+						  <tr>
+						    <th>inch</th>
+						    <th>feet</th>
+						    <th>yard</th>
+						    <th>mile</th>
+						    <th>league</th>
+						  </tr>
+						  <tr>
+						    <td style="font-weight: normal;">2.5cm</td>
+						    <td>30cm</td>
+						    <td>91cm</td>
+						    <td>1.6km</td>
+						    <td>5.5km</td>
+						  </tr>
+						</table>
+
+
+						<table class=conversion_table style="grid-column: 2; grid-row: 2;">
+						  <tr>
+						    <th></th>
+						    <th>pound</th>
+						    <th>ounce</th>
+						  </tr>
+						  <tr>
+						    <td>ounce</td>
+						    <td>16</td>
+						    <td>1</td>
+						  </tr>
+						  <tr>
+						    <td>gram</td>
+						    <td>454</td>
+						    <td>28</td>
+						  </tr>
+						</table>
+					</div>
+				</column-container>
+
+
+
+				<column-container>
+					<!-- MONEY AND TREASURE -->
+					<textbox-big>
+						<boxlabel-inside><b>Money and Treasure</b><hr></boxlabel-inside>
+						<inventory-section height="high" emptyrows=9 header="BODY_BAG_ITEM_COST_WEIGHT" parser="" content=""></inventory-section>
+						
+						<grid-container style="
+							margin-top: 5mm;
+							grid-template-columns: repeat(8, 1fr);
+							grid-template-rows: repeat(1, 1fr);
+						">
+							<money-box>
+								<boxlabel-outside>Copper</boxlabel-outside>
+								<img src="elements/moneybox_cp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Silver</boxlabel-outside>
+								<img src="elements/moneybox_sp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Gold</boxlabel-outside>
+								<img src="elements/moneybox_gp.png">
+							</money-box>
+							<!-- <money-box>
+								<boxlabel-outside>Electrum</boxlabel-outside>
+								<img src="elements/moneybox_ep.png">
+							</money-box> -->
+							<money-box>
+								<boxlabel-outside>Platinum</boxlabel-outside>
+								<img src="elements/moneybox_pp.png">
+							</money-box>
+						</grid-container>
+
+						<grid-container style="
+							grid-template-columns: repeat(8, 1fr);
+							grid-template-rows: repeat(1, 1fr);
+						">
+							<money-box>
+								<boxlabel-outside>Copper</boxlabel-outside>
+								<img src="elements/moneybox_cp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Silver</boxlabel-outside>
+								<img src="elements/moneybox_sp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Gold</boxlabel-outside>
+								<img src="elements/moneybox_gp.png">
+							</money-box>
+							<!-- <money-box>
+								<boxlabel-outside>Electrum</boxlabel-outside>
+								<img src="elements/moneybox_ep.png">
+							</money-box> -->
+							<money-box>
+								<boxlabel-outside>Platinum</boxlabel-outside>
+								<img src="elements/moneybox_pp.png">
+							</money-box>
+						</grid-container>
+					</textbox-big>
+
+					<!-- MISCELLANEOUS -->
+					<textbox-big>
+						<boxlabel-inside><b>Miscellaneous</b><hr></boxlabel-inside>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=20></inventory-section>
+					</textbox-big>
+
+					<textbox-big><div class=text>
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+					</textbox-big>
+
+					
+				</column-container>
+
+				<column-container style="grid-row: 1/3;">
+					<!-- CONSUMABLES -->
+					<textbox-big>
+						<boxlabel-inside><b>Consumables</b><hr></boxlabel-inside>
+
+						<inventory-section height="high" header="BODY_BAG_UNIT_ITEM_COST_WEIGHT" parser="UNIT_ITEM_COST_WEIGHT" content="
+						vials
+						Acid
+						25 gp
+						1 lb.
+						vials
+						Alchemist's Fire
+						50 gp
+						1 lb.
+						vials
+						Antitoxin
+						50 gp
+						-
+						pouches
+						Ball Bearings
+						1 gp
+						2 lb.
+						vials
+						Basic Poison
+						100 gp
+						-
+						bags
+						Caltrops
+						1 gp
+						2 lb.
+						uses
+						Healer's Kit (10)
+						5 sp
+						0.3 lb.
+						flasks
+						Holy Water
+						25 gp
+						1 lb.
+						bottles
+						Ink
+						10 gp
+						-
+						flasks
+						Oil
+						1 sp
+						1 lb.
+						vials
+						Perfume
+						5 gp
+						-
+						days
+						Rations
+						5 sp
+						2 lb.
+						feet
+						Rope
+						2 cp
+						⅒ lb.
+						feet
+						String
+						1 cp
+						-
+						gallons
+						Water
+						-
+						8⅓ lb."></inventory-section>						
+					</textbox-big>
+
+
+					<!-- GEAR -->
+					<textbox-big>
+						<boxlabel-inside><b>Gear</b><hr></boxlabel-inside>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" 
+						content_exclude="
+						Acid
+						Alchemist's Fire
+						Antitoxin
+						Ball Bearings
+						Basic Poison
+						Caltrops
+						Healer's Kit
+						Holy Water
+						Ink
+						Oil
+						Perfume
+						Rations
+						Rope
+						String
+
+						Burglar's Pack
+						Diplomat's Pack
+						Dungeoneer's Pack
+						Entertainer's Pack
+						Explorer's Pack
+						Priest's Pack
+						Scholar's Pack
+
+						Book
+
+						Costume
+						Fine Clothes
+						Robe
+						Traveler's Clothes
+
+						Component Pouch
+						Iron Spikes
+						Map
+						Trinket
+						"
+
+						content="
+						Acid
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Alchemist's Fire
+						Adventuring Gear
+						50 gp
+						1 lb.
+						PHB'24
+						Antitoxin
+						Adventuring Gear
+						50 gp
+						—
+						PHB'24
+						Backpack
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Ball Bearings
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Barrel
+						Adventuring Gear
+						2 gp
+						70 lb.
+						PHB'24
+						Basic Poison
+						Adventuring Gear, Poison
+						100 gp
+						—
+						PHB'24
+						Basket
+						Adventuring Gear
+						4 sp
+						2 lb.
+						PHB'24
+						Bedroll
+						Adventuring Gear
+						1 gp
+						7 lb.
+						PHB'24
+						Bell
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Blanket
+						Adventuring Gear
+						5 sp
+						3 lb.
+						PHB'24
+						Block and Tackle
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Book
+						Adventuring Gear
+						25 gp
+						5 lb.
+						PHB'24
+						Bucket
+						Adventuring Gear
+						5 cp
+						2 lb.
+						PHB'24
+						Bullseye Lantern
+						Adventuring Gear
+						10 gp
+						2 lb.
+						PHB'24
+						Burglar's Pack
+						Adventuring Gear
+						16 gp
+						47½ lb.
+						PHB'24
+						Caltrops
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Candle
+						Adventuring Gear
+						1 cp
+						—
+						PHB'24
+						Chain
+						Adventuring Gear
+						5 gp
+						10 lb.
+						PHB'24
+						Chest
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Climber's Kit
+						Adventuring Gear
+						25 gp
+						12 lb.
+						PHB'24
+						Component Pouch
+						Adventuring Gear
+						25 gp
+						2 lb.
+						PHB'24
+						Costume
+						Adventuring Gear
+						5 gp
+						4 lb.
+						PHB'24
+						Crossbow Bolt Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Crowbar
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Diplomat's Pack
+						Adventuring Gear
+						39 gp
+						39 lb.
+						PHB'24
+						Dungeoneer's Pack
+						Adventuring Gear
+						12 gp
+						55 lb.
+						PHB'24
+						Entertainer's Pack
+						Adventuring Gear
+						40 gp
+						58½ lb.
+						PHB'24
+						Explorer's Pack
+						Adventuring Gear
+						10 gp
+						55 lb.
+						PHB'24
+						Fine Clothes
+						Adventuring Gear
+						15 gp
+						6 lb.
+						PHB'24
+						Flask
+						Adventuring Gear
+						2 cp
+						1 lb.
+						PHB'24
+						Glass Bottle
+						Adventuring Gear
+						2 gp
+						2 lb.
+						PHB'24
+						Grappling Hook
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Healer's Kit
+						Adventuring Gear
+						5 gp
+						3 lb.
+						PHB'24
+						Holy Water
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Hooded Lantern
+						Adventuring Gear
+						5 gp
+						2 lb.
+						PHB'24
+						Hunting Trap
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Ink
+						Adventuring Gear
+						10 gp
+						—
+						PHB'24
+						Ink Pen
+						Adventuring Gear
+						2 cp
+						—
+						PHB'24
+						Iron Pot
+						Adventuring Gear
+						2 gp
+						10 lb.
+						PHB'24
+						Iron Spike
+						Adventuring Gear
+						1 sp
+						½ lb.
+						PHB'24
+						Iron Spikes
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Jug
+						Adventuring Gear
+						2 cp
+						4 lb.
+						PHB'24
+						Ladder
+						Adventuring Gear
+						1 sp
+						25 lb.
+						PHB'24
+						Lamp
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Lock
+						Adventuring Gear
+						10 gp
+						1 lb.
+						PHB'24
+						Magnifying Glass
+						Adventuring Gear
+						100 gp
+						—
+						PHB'24
+						Manacles
+						Adventuring Gear
+						2 gp
+						6 lb.
+						PHB'24
+						Map
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Map or Scroll Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Mirror
+						Adventuring Gear
+						5 gp
+						½ lb.
+						PHB'24
+						Net
+						Adventuring Gear
+						1 gp
+						3 lb.
+						PHB'24
+						Oil
+						Adventuring Gear
+						1 sp
+						1 lb.
+						PHB'24
+						Paper
+						Adventuring Gear
+						2 sp
+						—
+						PHB'24
+						Parchment
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Perfume
+						Adventuring Gear
+						5 gp
+						—
+						PHB'24
+						Pole
+						Adventuring Gear
+						5 cp
+						7 lb.
+						PHB'24
+						Portable Ram
+						Adventuring Gear
+						4 gp
+						35 lb.
+						PHB'24
+						Pouch
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Priest's Pack
+						Adventuring Gear
+						33 gp
+						29 lb.
+						PHB'24
+						Quiver
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Rations
+						Adventuring Gear
+						5 sp
+						2 lb.
+						PHB'24
+						Robe
+						Adventuring Gear
+						1 gp
+						4 lb.
+						PHB'24
+						Rope
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Sack
+						Adventuring Gear
+						1 cp
+						½ lb.
+						PHB'24
+						Scholar's Pack
+						Adventuring Gear
+						40 gp
+						22 lb.
+						PHB'24
+						Shovel
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Signal Whistle
+						Adventuring Gear
+						5 cp
+						—
+						PHB'24
+						Spyglass
+						Adventuring Gear
+						1,000 gp
+						1 lb.
+						PHB'24
+						String
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Tent
+						Adventuring Gear
+						2 gp
+						20 lb.
+						PHB'24
+						Tinderbox
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Torch
+						Adventuring Gear
+						1 cp
+						1 lb.
+						PHB'24
+						Traveler's Clothes
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Trinket
+						Adventuring Gear
+						—
+						—
+						PHB'24
+						Vial
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Waterskin
+						Adventuring Gear
+						2 sp
+						5 lb.
+						PHB'24"></inventory-section>
+					</textbox-big>
+
+
+					<!-- TOOLS ->
+					<textbox-big>
+						<boxlabel-inside><b>Tools</b><hr></boxlabel-inside>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" content="
+						Alchemist's Supplies
+						Artisan's Tools
+						50 gp
+						8 lb.
+						PHB'24
+						Brewer's Supplies
+						Artisan's Tools
+						20 gp
+						9 lb.
+						PHB'24
+						Calligrapher's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Carpenter's Tools
+						Artisan's Tools
+						8 gp
+						6 lb.
+						PHB'24
+						Cartographer's Tools
+						Artisan's Tools
+						15 gp
+						6 lb.
+						PHB'24
+						Cobbler's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Cook's Utensils
+						Artisan's Tools
+						1 gp
+						8 lb.
+						PHB'24
+						Disguise Kit
+						Tool
+						25 gp
+						3 lb.
+						PHB'24
+						Forgery Kit
+						Tool
+						15 gp
+						5 lb.
+						PHB'24
+						Glassblower's Tools
+						Artisan's Tools
+						30 gp
+						5 lb.
+						PHB'24
+						Herbalism Kit
+						Tool
+						5 gp
+						3 lb.
+						PHB'24
+						Jeweler's Tools
+						Artisan's Tools
+						25 gp
+						2 lb.
+						PHB'24
+						Leatherworker's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Mason's Tools
+						Artisan's Tools
+						10 gp
+						8 lb.
+						PHB'24
+						Navigator's Tools
+						Tool
+						25 gp
+						2 lb.
+						PHB'24
+						Painter's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Poisoner's Kit
+						Tool
+						50 gp
+						2 lb.
+						PHB'24
+						Potter's Tools
+						Artisan's Tools
+						10 gp
+						3 lb.
+						PHB'24
+						Smith's Tools
+						Artisan's Tools
+						20 gp
+						8 lb.
+						PHB'24
+						Thieves' Tools
+						Tool
+						25 gp
+						1 lb.
+						PHB'24
+						Tinker's Tools
+						Artisan's Tools
+						50 gp
+						10 lb.
+						PHB'24
+						Weaver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Woodcarver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Three-Dragon Ante Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Playing Cards
+						Gaming Set
+						5 sp
+						—
+						PHB'24
+						Dragonchess Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Dice Set
+						Gaming Set
+						1 sp
+						—
+						PHB'24"></inventory-section>
+					</textbox-big><!---->
+
+				</column-container>
+
+
+				
+			</shadow-box>
+
+			<!-- end of the box of 16 by 22 -->
+		</div>
+	</div>
+
+
+  <script src="scripts/inventory_sections.js"></script> 
+</body>
+
+</html>

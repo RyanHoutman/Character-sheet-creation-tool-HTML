@@ -1,0 +1,17 @@
+.checkbox_circle {
+	width: 2mm;
+	height: 2mm;
+
+	border: solid black;
+	border-radius: 50%;
+	border-width: 0.4mm;
+}
+
+checkbox-circle {
+	width: 2mm;
+	height: 2mm;
+
+	border: solid black;
+	border-radius: 50%;
+	border-width: 0.4mm;
+}

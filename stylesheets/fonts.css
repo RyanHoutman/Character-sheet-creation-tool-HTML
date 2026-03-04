@@ -1,0 +1,76 @@
+.boxLabelInside {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+.boxLabelOutside {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+.skills dt {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+.spell_line {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+.banner {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 7px;
+}
+
+.shaded_text {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 6px;
+	color: var(--darkgray);
+}
+
+.header {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+.text {
+	font-family: helvetica;
+	font-size: 8px;
+	white-space: pre-line;
+}
+
+
+
+shaded-text {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 6px;
+	color: var(--darkgray);
+}
+
+boxlabel-inside {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+boxlabel-outside {
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 8px;
+}
+
+header {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 8px;
+}

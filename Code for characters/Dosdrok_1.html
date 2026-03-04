@@ -1,0 +1,359 @@
+<div class=page_cutout
+	style="
+	width: 16cm; 
+	height: 22cm;
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	grid-template-rows: 27mm repeat(5, max-content);
+	grid-auto-flow: column;
+">
+
+	<!-- This is a box with the size of 16cm by 22cm -->
+
+	<div class=namebanner style="grid-column: 1/4; grid-row: 1; width: 15cm; margin: 0 0.4cm">
+		<div class=name></div>
+		<div class=level></div>
+		<div class=box style="
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			">
+				<div class=text_lines>Race</div>
+				<div class=text_lines>Height</div>
+				<div class=text_lines>Weight</div>
+				<div class=text_lines>Class</div>
+				<div class=text_lines>Subclass</div>
+				<div class=text_lines>Alignment</div>
+		</div>
+	</div>
+
+
+
+	<!-- SPELL ATTACK BONUS, PACT SLOT LEVEL, INSPIRATION, SPELLSAVE -->
+	<div style="
+		/*grid-column: 1; grid-row: 2;*/
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, max-content);
+		align-content: start;
+		grid-column-gap: 1mm;
+		grid-row-gap: 0.5mm;
+		">
+
+		<div class=skill_banner>
+			<div class=banner><p>Pact magic level</p></div>
+			<img class=tag1 src="elements/smallbox_1.png">
+		</div>
+
+		<div class=skill_banner>
+			<div class=banner><p>Inspiration</p></div>
+			<img class=tag2 src="elements/smallbox_2.png">
+		</div>
+
+		<div class=skill_banner>
+			<div class=banner><p>Spell attack bonus</p></div>
+			<img class=tag3 src="elements/smallbox_3.png">
+		</div>
+
+		<div class=skill_banner>
+			<div class=banner><p>Spell save DC</p></div>
+			<img class=tag3 src="elements/smallbox_3.png">
+		</div>
+	</div>
+
+
+
+	<!-- STATS AND SKILLS -->
+	<div class=shadowbox style="grid-column: 1; grid-row: 3/-1;">
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Strength</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Strength Saving Throw</dt>
+				<dt class="skillProf">Athlethics</dt>
+			</dl>
+		</div>
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Dexterity</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+				<dt class="skillProf">Acrobatics</dt>
+				<dt class="skillProf">Sleight of Hand</dt>
+				<dt class="skillProf">Stealth</dt>
+			</dl>
+		</div>
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Constitution</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Constitution Saving Throw</dt>
+			</dl>
+		</div>
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Intelligence</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+				<dt class="skillProf">Arcana</dt>
+				<dt class="skillProf">History</dt>
+				<dt class="skillProf">Investigation</dt>
+				<dt class="skillProf">Nature</dt>
+				<dt class="skillProf">Religion</dt>
+			</dl>
+		</div>
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Wisdom</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+				<dt class="skillProf">Animal Handling</dt>
+				<dt class="skillProf">Insight</dt>
+				<dt class="skillProf">Medicine</dt>
+				<dt class="skillProf">Perception</dt>
+				<dt class="skillProf">Survival</dt>
+			</dl>
+		</div>
+
+		<div class=statbox>
+			<div class="boxLabelInside"><b>Charisma</b></div>
+			<dl class="skills">
+				<dt class="savingThrowProf">Charisma Saving Throw</dt>
+				<dt class="skillProf">Deception</dt>
+				<dt class="skillProf">Intimidation</dt>
+				<dt class="skillProf">Performance</dt>
+				<dt class="skillProf">Persuasion</dt>
+			</dl>
+		</div>
+	</div>
+
+
+
+	<div class=textbox_paper 
+		style="
+			grid-column: 3; grid-row: 2/4; height: auto;
+
+			display: grid;
+			grid-template-columns: repeat(3, max-content);
+			justify-content: space-evenly;
+			align-content: space-evenly;
+			">
+
+		<div class=boxLabelInside><b>proficiencies</b><hr></div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>L. Armor</div>
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>M. Armor</div>
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>H. Armor</div>
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>S. Weapons</div>
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>M. Weapons</div>
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=profiency_checkbox>
+			<div class=boxLabelOutside>Shields</div>
+			<img src="elements/Checkbox.png">
+		</div>
+	</div>
+
+
+
+	<!-- SPELLSLOTS -->
+	<div class=textbox_big
+		style="
+			grid-column: 2; grid-row: 2/4;
+			grid-template-columns: repeat(5, max-content);
+			justify-content: space-evenly;
+			">
+		<div class=boxLabelInside><b>Spellslots</b><hr></div>
+
+		<div class=spellslot_column style="grid-template-columns: 1fr 1fr">
+			<div class=header style="grid-column: 1/3">Pact slots</div>
+			<img src="elements/Checkbox.png">
+			<img src="elements/Checkbox.png">
+			<img src="elements/Checkbox.png">
+			<img src="elements/Checkbox.png">
+		</div>
+
+		<div class=spellslot_column>
+			<div class=header>6th</div>
+			<img src="elements/Checkbox.png">
+		</div>
+		<div class=spellslot_column>
+			<div class=header>7th</div>
+			<img src="elements/Checkbox.png">
+		</div>
+		<div class=spellslot_column>
+			<div class=header>8th</div>
+			<img src="elements/Checkbox.png">
+		</div>
+		<div class=spellslot_column>
+			<div class=header>9th</div>
+			<img src="elements/Checkbox.png">
+		</div>
+	</div>
+
+
+	<!-- AC HITPOINTS INITIATIVE SPEED -->
+	<div class=shadowbox 
+		style="
+			grid-column: 2/4; grid-row: 4;
+			grid-template-columns: repeat(2, max-content);
+			grid-template-rows: repeat(3, 1fr);
+			grid-auto-flow: column;
+		">
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b>Magical cunning</b></div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b>Healing light</b></div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b>Searing vengeance</b></div>
+		</div>
+
+
+		<div class="textbox_paper hpbox" style="grid-column: 2/4; grid-row: 1/3;">
+			<div class=simplebox>
+				<div class="boxLabelOutside">Maximum hitpoints</div>
+			</div>
+
+			<div class=simplebox>
+				<div class="boxLabelOutside">Current hitpoints</div>
+			</div>
+
+			<div class=simplebox>
+				<div class="boxLabelOutside">Temporary hitpoints</div>
+			</div>
+
+			<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+				<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+				<div class=simplebox></div>
+			</div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b></b></div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b></b></div>
+		</div>
+
+		<div class=shieldbox>
+			<div class="boxLabelInside"><b>AC</b></div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b>Initiative</b></div>
+		</div>
+
+		<div class=simplebox>
+			<div class="boxLabelInside"><b>Speed</b></div>
+		</div>
+	</div>
+
+
+
+	<!-- ATTACKS -->
+	<div class=textbox_big style="grid-column: 2/4;/* grid-row: z;*/">
+		<div class=boxLabelInside><b>Attacks</b><hr></div>
+		<div style="
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-row-gap: 0.5mm;
+			">
+			<div class=weapon_line_headers>
+				<div class=shaded_text>Weapon name</div>
+				<div class=shaded_text>Atk bonus</div>
+				<div class=shaded_text>Damage/type</div>
+			</div>
+			<div class=weapon_line>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+			</div>
+			<div class=weapon_line>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+			</div>
+			<div class=weapon_line>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+			</div>
+			<div class=weapon_line>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+				<div class=text_notchedbox></div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<!-- SPELLS -->
+	<div class=textbox_big id=spellbox1
+		style="
+			grid-column: 2/4; /*grid-row: 5;*/
+			grid-template-columns: repeat(2, 1fr);
+			">
+		<div class=boxLabelInside><b>Prepared Spells</b><hr></div>
+
+		<template id=spell_line_template>
+			<div class=spell_line>
+				<div class=text_notchedbox></div>
+				<img src="elements/Checkbox.png">
+				<div class=text_underscore></div>
+			</div>
+		</template>
+		<script type="text/javascript">
+			// Repeat the template element 5 times 
+			for (let i = 0; i < 40; i++) { 
+			  document.getElementById('spellbox1').appendChild(document.getElementById('spell_line_template').content.cloneNode(true)); 
+			}
+		</script>
+	</div>
+
+
+
+	<!-- end of the box of 16 by 22 -->
+</div>

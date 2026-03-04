@@ -1,0 +1,8 @@
+.ability_trackers {
+	
+}
+
+.ability_trackers .simplebox{
+	--size: 0.75;
+	--borderScale: 1;
+}

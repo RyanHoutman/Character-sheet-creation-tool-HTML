@@ -1,0 +1,72 @@
+.textbox_paper {
+	width: stretch;
+	height: max-content;
+	position: relative;
+	padding: 1mm 3mm;
+	border-image-source: url(../elements/textbox_paper.png);
+	border-image-repeat: stretch;
+	border-image-slice: 35 31 fill; 
+	border-image-width: 2.5mm;
+
+	margin: 1mm;
+}
+
+.textbox_paper:has(.boxLabelInside) {
+	padding-top: 4.3mm;
+}
+
+.textbox_paper .boxLabelInside {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.textbox_paper .boxLabelInside hr {
+	width: 60%;
+	margin: 0 20%;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}
+
+
+textbox-paper {
+	width: stretch;
+	height: max-content;
+	position: relative;
+	padding: 1mm 3mm;
+	border-image-source: url(../elements/textbox_paper.png);
+	border-image-repeat: stretch;
+	border-image-slice: 35 31 fill; 
+	border-image-width: 2.5mm;
+
+	margin: 1mm;
+}
+
+textbox-paper:has(boxlabel-inside) {
+	padding-top: 4.3mm;
+}
+
+textbox-paper boxlabel-inside {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+textbox-paper boxlabel-inside hr {
+	width: 60%;
+	margin: 0 20%;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}

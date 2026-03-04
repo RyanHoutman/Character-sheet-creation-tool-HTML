@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A4 Paper</title>
+  <link rel="stylesheet" href="./A4.css">
+
+  <!-- General styles -->
+  <link rel="stylesheet" href="stylesheets/colors.css"/>
+  <link rel="stylesheet" href="stylesheets/fonts.css"/>
+
+  <!-- Player fillable boxes -->
+  <link rel="stylesheet" href="stylesheets/simplebox.css"/>
+  <link rel="stylesheet" href="stylesheets/shieldbox.css"/>
+  <link rel="stylesheet" href="stylesheets/text_notchedbox.css"/>
+  <link rel="stylesheet" href="stylesheets/checkboxes.css"/>
+  <link rel="stylesheet" href="stylesheets/moneyboxes.css"/>
+
+  <!-- Large containers capable of being player fillable or filled with smaller items -->
+  <link rel="stylesheet" href="stylesheets/namebanners.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_big.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_paper.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_stacked.css"/>
+  <link rel="stylesheet" href="stylesheets/shadowbox.css"/>
+
+  <!-- Layout rules for certain specific goal groupings -->
+  <link rel="stylesheet" href="stylesheets/containers.css"/>
+  <link rel="stylesheet" href="stylesheets/statbox.css"/>
+  <link rel="stylesheet" href="stylesheets/skill_banner.css"/>
+  <link rel="stylesheet" href="stylesheets/hpbox.css"/>
+  <link rel="stylesheet" href="stylesheets/weapon_line.css"/>
+  <link rel="stylesheet" href="stylesheets/spellslot_column.css"/>
+  <link rel="stylesheet" href="stylesheets/spell_line.css"/>
+  <link rel="stylesheet" href="stylesheets/inventory_line.css"/>
+  <link rel="stylesheet" href="stylesheets/ability_trackers.css"/>
+  <link rel="stylesheet" href="stylesheets/profiency_checkbox.css"/>
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+  <div class="page">
+
+  	<div class=page_cutout
+  		style="
+  		width: 16cm; 
+  		height: 22cm;
+  		display: grid;
+  		grid-template-columns: repeat(2, 1fr);
+  		grid-template-rows: repeat(1, 1fr);
+  		grid-auto-flow: column;
+
+  		grid-row-gap: 1mm;
+  		grid-column-gap: 1mm;
+  	">
+
+			<!-- This is a box with the size of 16cm by 22cm -->
+			<div class=shadowbox style="
+					grid-column: 1/3;
+					height: 100%;
+					grid-template-columns: repeat(2, 1fr);
+				">
+				<!-- <div class=boxLabelInside>Adventuring Gear</div> -->
+
+				<div class=column>
+					<!-- CONSUMABLES -->
+					<div class=textbox_big style="grid-row-gap: 1.5mm">
+						<div class=boxLabelInside><b>Consumables</b><hr></div>
+
+						<inventory-section height="high" header="BODY_BAG_UNIT_ITEM_COST_WEIGHT" parser="UNIT_ITEM_COST_WEIGHT" content="
+						vials
+						Acid
+						25 gp
+						1 lb.
+						vials
+						Alchemist's Fire
+						50 gp
+						1 lb.
+						vials
+						Antitoxin
+						50 gp
+						-
+						pouches
+						Ball Bearings
+						1 gp
+						2 lb.
+						vials
+						Basic Poison
+						100 gp
+						-
+						bags
+						Caltrops
+						1 gp
+						2 lb.
+						uses
+						Healer's Kit (10)
+						5 sp
+						0.3 lb.
+						flasks
+						Holy Water
+						25 gp
+						1 lb.
+						bottles
+						Ink
+						10 gp
+						-
+						flasks
+						Oil
+						1 sp
+						1 lb.
+						vials
+						Perfume
+						5 gp
+						-
+						days
+						Rations
+						5 sp
+						2 lb.
+						feet
+						Rope
+						2 cp
+						⅒ lb.
+						feet
+						String
+						1 cp
+						-
+						gallons
+						Water
+						-
+						8⅓ lb."></inventory-section>						
+					</div>
+
+
+					<!-- TOOLS -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Tools</b><hr></div>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" content="
+						Alchemist's Supplies
+						Artisan's Tools
+						50 gp
+						8 lb.
+						PHB'24
+						Brewer's Supplies
+						Artisan's Tools
+						20 gp
+						9 lb.
+						PHB'24
+						Calligrapher's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Carpenter's Tools
+						Artisan's Tools
+						8 gp
+						6 lb.
+						PHB'24
+						Cartographer's Tools
+						Artisan's Tools
+						15 gp
+						6 lb.
+						PHB'24
+						Cobbler's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Cook's Utensils
+						Artisan's Tools
+						1 gp
+						8 lb.
+						PHB'24
+						Disguise Kit
+						Tool
+						25 gp
+						3 lb.
+						PHB'24
+						Forgery Kit
+						Tool
+						15 gp
+						5 lb.
+						PHB'24
+						Glassblower's Tools
+						Artisan's Tools
+						30 gp
+						5 lb.
+						PHB'24
+						Herbalism Kit
+						Tool
+						5 gp
+						3 lb.
+						PHB'24
+						Jeweler's Tools
+						Artisan's Tools
+						25 gp
+						2 lb.
+						PHB'24
+						Leatherworker's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Mason's Tools
+						Artisan's Tools
+						10 gp
+						8 lb.
+						PHB'24
+						Navigator's Tools
+						Tool
+						25 gp
+						2 lb.
+						PHB'24
+						Painter's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Poisoner's Kit
+						Tool
+						50 gp
+						2 lb.
+						PHB'24
+						Potter's Tools
+						Artisan's Tools
+						10 gp
+						3 lb.
+						PHB'24
+						Smith's Tools
+						Artisan's Tools
+						20 gp
+						8 lb.
+						PHB'24
+						Thieves' Tools
+						Tool
+						25 gp
+						1 lb.
+						PHB'24
+						Tinker's Tools
+						Artisan's Tools
+						50 gp
+						10 lb.
+						PHB'24
+						Weaver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Woodcarver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Three-Dragon Ante Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Playing Cards
+						Gaming Set
+						5 sp
+						—
+						PHB'24
+						Dragonchess Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Dice Set
+						Gaming Set
+						1 sp
+						—
+						PHB'24"></inventory-section>
+					</div>
+				</div>
+
+				<div class=column>
+					<!-- GEAR -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Gear</b><hr></div>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" 
+						content_exclude="
+						Acid
+						Alchemist's Fire
+						Antitoxin
+						Ball Bearings
+						Basic Poison
+						Caltrops
+						Healer's Kit
+						Holy Water
+						Ink
+						Oil
+						Perfume
+						Rations
+						Rope
+						String
+
+						Burglar's Pack
+						Diplomat's Pack
+						Dungeoneer's Pack
+						Entertainer's Pack
+						Explorer's Pack
+						Priest's Pack
+						Scholar's Pack
+
+						Book
+
+						Costume
+						Fine Clothes
+						Robe
+						Traveler's Clothes
+
+						Component Pouch
+						Iron Spikes
+						Map
+						Trinket
+						"
+
+						content="
+						Acid
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Alchemist's Fire
+						Adventuring Gear
+						50 gp
+						1 lb.
+						PHB'24
+						Antitoxin
+						Adventuring Gear
+						50 gp
+						—
+						PHB'24
+						Backpack
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Ball Bearings
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Barrel
+						Adventuring Gear
+						2 gp
+						70 lb.
+						PHB'24
+						Basic Poison
+						Adventuring Gear, Poison
+						100 gp
+						—
+						PHB'24
+						Basket
+						Adventuring Gear
+						4 sp
+						2 lb.
+						PHB'24
+						Bedroll
+						Adventuring Gear
+						1 gp
+						7 lb.
+						PHB'24
+						Bell
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Blanket
+						Adventuring Gear
+						5 sp
+						3 lb.
+						PHB'24
+						Block and Tackle
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Book
+						Adventuring Gear
+						25 gp
+						5 lb.
+						PHB'24
+						Bucket
+						Adventuring Gear
+						5 cp
+						2 lb.
+						PHB'24
+						Bullseye Lantern
+						Adventuring Gear
+						10 gp
+						2 lb.
+						PHB'24
+						Burglar's Pack
+						Adventuring Gear
+						16 gp
+						47½ lb.
+						PHB'24
+						Caltrops
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Candle
+						Adventuring Gear
+						1 cp
+						—
+						PHB'24
+						Chain
+						Adventuring Gear
+						5 gp
+						10 lb.
+						PHB'24
+						Chest
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Climber's Kit
+						Adventuring Gear
+						25 gp
+						12 lb.
+						PHB'24
+						Component Pouch
+						Adventuring Gear
+						25 gp
+						2 lb.
+						PHB'24
+						Costume
+						Adventuring Gear
+						5 gp
+						4 lb.
+						PHB'24
+						Crossbow Bolt Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Crowbar
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Diplomat's Pack
+						Adventuring Gear
+						39 gp
+						39 lb.
+						PHB'24
+						Dungeoneer's Pack
+						Adventuring Gear
+						12 gp
+						55 lb.
+						PHB'24
+						Entertainer's Pack
+						Adventuring Gear
+						40 gp
+						58½ lb.
+						PHB'24
+						Explorer's Pack
+						Adventuring Gear
+						10 gp
+						55 lb.
+						PHB'24
+						Fine Clothes
+						Adventuring Gear
+						15 gp
+						6 lb.
+						PHB'24
+						Flask
+						Adventuring Gear
+						2 cp
+						1 lb.
+						PHB'24
+						Glass Bottle
+						Adventuring Gear
+						2 gp
+						2 lb.
+						PHB'24
+						Grappling Hook
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Healer's Kit
+						Adventuring Gear
+						5 gp
+						3 lb.
+						PHB'24
+						Holy Water
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Hooded Lantern
+						Adventuring Gear
+						5 gp
+						2 lb.
+						PHB'24
+						Hunting Trap
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Ink
+						Adventuring Gear
+						10 gp
+						—
+						PHB'24
+						Ink Pen
+						Adventuring Gear
+						2 cp
+						—
+						PHB'24
+						Iron Pot
+						Adventuring Gear
+						2 gp
+						10 lb.
+						PHB'24
+						Iron Spike
+						Adventuring Gear
+						1 sp
+						½ lb.
+						PHB'24
+						Iron Spikes
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Jug
+						Adventuring Gear
+						2 cp
+						4 lb.
+						PHB'24
+						Ladder
+						Adventuring Gear
+						1 sp
+						25 lb.
+						PHB'24
+						Lamp
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Lock
+						Adventuring Gear
+						10 gp
+						1 lb.
+						PHB'24
+						Magnifying Glass
+						Adventuring Gear
+						100 gp
+						—
+						PHB'24
+						Manacles
+						Adventuring Gear
+						2 gp
+						6 lb.
+						PHB'24
+						Map
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Map or Scroll Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Mirror
+						Adventuring Gear
+						5 gp
+						½ lb.
+						PHB'24
+						Net
+						Adventuring Gear
+						1 gp
+						3 lb.
+						PHB'24
+						Oil
+						Adventuring Gear
+						1 sp
+						1 lb.
+						PHB'24
+						Paper
+						Adventuring Gear
+						2 sp
+						—
+						PHB'24
+						Parchment
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Perfume
+						Adventuring Gear
+						5 gp
+						—
+						PHB'24
+						Pole
+						Adventuring Gear
+						5 cp
+						7 lb.
+						PHB'24
+						Portable Ram
+						Adventuring Gear
+						4 gp
+						35 lb.
+						PHB'24
+						Pouch
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Priest's Pack
+						Adventuring Gear
+						33 gp
+						29 lb.
+						PHB'24
+						Quiver
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Rations
+						Adventuring Gear
+						5 sp
+						2 lb.
+						PHB'24
+						Robe
+						Adventuring Gear
+						1 gp
+						4 lb.
+						PHB'24
+						Rope
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Sack
+						Adventuring Gear
+						1 cp
+						½ lb.
+						PHB'24
+						Scholar's Pack
+						Adventuring Gear
+						40 gp
+						22 lb.
+						PHB'24
+						Shovel
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Signal Whistle
+						Adventuring Gear
+						5 cp
+						—
+						PHB'24
+						Spyglass
+						Adventuring Gear
+						1,000 gp
+						1 lb.
+						PHB'24
+						String
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Tent
+						Adventuring Gear
+						2 gp
+						20 lb.
+						PHB'24
+						Tinderbox
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Torch
+						Adventuring Gear
+						1 cp
+						1 lb.
+						PHB'24
+						Traveler's Clothes
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Trinket
+						Adventuring Gear
+						—
+						—
+						PHB'24
+						Vial
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Waterskin
+						Adventuring Gear
+						2 sp
+						5 lb.
+						PHB'24"></inventory-section>
+					</div>
+
+
+					<!-- <shaded-text style="text-transform: none;">
+					1 gallon = 4 quarts.;	1 gallon = 8 pints;	1 gallon = 128 oz.;	1 gallon = 3.79 liters<br>
+					1 quart = 2 pints; 1 quart = 32 oz.; 1 quart = 0.94 liter;<br>
+					1 pint = 16 oz.; 1 pint = 0.47 liter; 1 oz. = 30ml;<br>
+					1 lb. = 16 oz.; 1 lb. = 0.45 kg; 1 oz. = 28.35 g
+					</shaded-text> -->
+
+
+					<style>
+						.conversion_table tr :is(th, td) {
+							font-family: helvetica;
+							font-size: 8px;
+							color: var(--darkgray);
+
+							text-align: center;
+							padding: 0 0.5mm;
+						}
+
+						.conversion_table {
+							width: max-content;
+							height: max-content;
+							table-layout: fixed;
+							border-collapse: collapse;
+						}
+
+						.conversion_table tr td:first-child {
+							font-weight: bold;
+						}
+					</style>
+
+					<div style="
+						display: grid;
+						grid-template-columns: repeat(2, max-content);
+						grid-template-rows: repeat(2, max-content);
+						grid-row-gap: 1mm;
+						grid-column-gap: 1mm;
+						">
+						<table class=conversion_table style="grid-column: 1; grid-row: 1/-1;">
+						  <tr>
+						    <th></th>
+						    <th>gallon</th>
+						    <th>quart</th>
+						    <th>pint</th>
+						    <th>ounce</th>
+						  </tr>
+						  <tr>
+						    <td>quart</td>
+						    <td>4</td>
+						    <td>1</td>
+						    <td></td>
+						    <td></td>
+						  </tr>
+						  <tr>
+						    <td>pint</td>
+						    <td>8</td>
+						    <td>2</td>
+						    <td>1</td>
+						    <td></td>
+						  </tr>
+						  <tr>
+						    <td>ounce</td>
+						    <td>128</td>
+						    <td>32</td>
+						    <td>16</td>
+						    <td>1</td>
+						  </tr>
+						  <tr>
+						    <td>liter</td>
+						    <td>3.79</td>
+						    <td>0.94</td>
+						    <td>0.47</td>
+						    <td>0.03</td>
+						  </tr>
+						</table>
+
+						<table class=conversion_table style="grid-column: 2; grid-row: 1;">
+						  <tr>
+						    <th>inch</th>
+						    <th>feet</th>
+						    <th>yard</th>
+						    <th>mile</th>
+						    <th>league</th>
+						  </tr>
+						  <tr>
+						    <td style="font-weight: normal;">2.5cm</td>
+						    <td>30cm</td>
+						    <td>91cm</td>
+						    <td>1.6km</td>
+						    <td>5.5km</td>
+						  </tr>
+						</table>
+
+
+						<table class=conversion_table style="grid-column: 2; grid-row: 2;">
+						  <tr>
+						    <th></th>
+						    <th>pound</th>
+						    <th>ounce</th>
+						  </tr>
+						  <tr>
+						    <td>ounce</td>
+						    <td>16</td>
+						    <td>1</td>
+						  </tr>
+						  <tr>
+						    <td>gram</td>
+						    <td>454</td>
+						    <td>28</td>
+						  </tr>
+						</table>
+
+						
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- GOTTA ADD:
+			- costumes/clothes
+			 -->
+
+
+
+
+			<!-- end of the box of 16 by 22 -->
+		</div>
+	</div>
+
+
+	<div class="page">
+
+  	<div class=page_cutout
+  		style="
+  		width: 16cm; 
+  		height: 22cm;
+  		display: grid;
+  		grid-template-columns: repeat(1, 1fr);
+  		grid-template-rows: repeat(1, 1fr);
+  		grid-auto-flow: column;
+
+  		grid-row-gap: 1mm;
+  		grid-column-gap: 1mm;
+  	">
+  		<shadow-box>
+	  		<column-container>
+		  		<!-- WEARING EQUIMENT -->
+					<div class=textbox_big style="grid-row-gap: 1.5mm">
+						<div class=boxLabelInside><b>Equipment</b><hr></div>
+
+						<inventory-section height="high" emptyrows=1 header="PLACE_ITEM_ATTUNED" parser="PLACE" content="
+						Head
+						Neck
+						Cloak
+						Armour
+						Arms
+						Gloves
+						Ring
+						Ring
+						Ring
+						Belt
+						Boots"></inventory-section>
+					</div>
+
+					<textbox-big>
+						<boxlabel-inside>Money and Treasure<hr></boxlabel-inside>
+						<inventory-section height="high" emptyrows=6 header="BODY_BAG_ITEM_COST_WEIGHT" parser="" content=""></inventory-section>
+						
+						<grid-container style="
+							margin-top: 5mm;
+							grid-template-columns: repeat(10, 1fr);
+							grid-template-rows: repeat(1, 1fr);
+						">
+							<money-box>
+								<boxlabel-outside>Copper</boxlabel-outside>
+								<img src="elements/moneybox_cp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Silver</boxlabel-outside>
+								<img src="elements/moneybox_sp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Gold</boxlabel-outside>
+								<img src="elements/moneybox_gp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Electrum</boxlabel-outside>
+								<img src="elements/moneybox_ep.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Platinum</boxlabel-outside>
+								<img src="elements/moneybox_pp.png">
+							</money-box>
+						</grid-container>
+
+						
+					</textbox-big>
+
+
+					<!-- WEAPONS -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Weapons</b><hr></div>
+						<inventory-section height="high" header="PLACE_ITEM_COST_WEIGHT" emptyrows=5></inventory-section>
+					</div>
+
+					<!-- BOOKS -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Books, Maps and Scrolls</b><hr></div>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=5></inventory-section>
+					</div>
+
+					
+
+					
+
+				</column-container><!-- 
+			</shadow-box>
+
+
+
+
+
+			<shadow-box> -->
+				<column-container>
+					<!-- CLOTHES -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Clothes</b><hr></div>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=3 parser="ITEM_SKIP_COST_WEIGHT_SKIP" content="
+						Fine Clothes
+						Adventuring Gear
+						15 gp
+						6 lb.
+						PHB'24
+						Traveler's Clothes
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24"></inventory-section>
+					</div>
+
+					<textbox-big>
+						<boxlabel-inside>Magic Items<hr></boxlabel-inside>
+						<inventory-section height="high" emptyrows=8 header="BODY_BAG_ITEM_COST_WEIGHT" parser="" content=""></inventory-section>						
+					</textbox-big>
+
+					<!-- MISCELLANEOUS -->
+					<div class=textbox_big>
+						<div class=boxLabelInside><b>Miscellaneous</b><hr></div>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=20></inventory-section>
+					</div>
+
+				</column-container>
+
+
+			</shadow-box>
+	  </div>
+	</div>
+
+
+
+
+
+	<script>
+		var all_inventory_sections = document.getElementsByTagName("inventory-section");
+
+		for (e of all_inventory_sections)
+		{
+			// console.log(e.getAttribute("content"));
+			const content_tokenized = e.hasAttribute("content") ? e.getAttribute("content").split("\n") : [];
+
+
+			const content_exclude_tokenized = e.hasAttribute("content_exclude") ? e.getAttribute("content_exclude").split("\n") : [];
+
+			const header_tokenized = e.hasAttribute("header") ? e.getAttribute("header").split("_") : [];
+			const parser_tokenized = e.hasAttribute("parser") ? e.getAttribute("parser").split("_") : [];
+
+			const emptyrows = e.hasAttribute("emptyrows") ? e.getAttribute("emptyrows") : 0;
+			const rowheight = e.hasAttribute("height") ? e.getAttribute("height") : "low";
+
+			// create the header
+			for (h of header_tokenized)
+			{
+				item = document.createElement("shaded-text");
+				item.innerHTML = h;
+				e.appendChild(item);
+			}
+
+			// set the column width and count
+			style_string = "";
+			for (h of header_tokenized)
+			{
+				switch (h)
+				{
+					case "ITEM": style_string += "1fr "; break;
+					case "PLACE": style_string += "minmax(15mm, max-content) "; break;
+					default: style_string += "minmax(7mm, max-content) "; break;
+				}					
+			}
+			e.style["grid-template-columns"] = style_string;
+
+
+			// set the row spacing according to height
+			switch (rowheight)
+			{
+				case "low":
+					e.style["grid-row-gap"] = "0.5mm";
+					break;
+				case "high":
+					e.style["grid-row-gap"] = "2mm";
+					break;
+			}
+			
+
+
+			// set the content
+			// ignore the first enter
+			for (var i=1; i < content_tokenized.length; i += parser_tokenized.length)
+			{
+				if (content_exclude_tokenized.includes(content_tokenized[i+parser_tokenized.indexOf("ITEM")]))
+					continue;
+
+
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+
+					if (parser_tokenized.includes(h))
+						item.innerHTML = content_tokenized[i+parser_tokenized.indexOf(h)];
+
+					e.appendChild(item);
+				}
+			}
+
+
+			for (var i=0; i < emptyrows; i++)
+			{
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+					e.appendChild(item);
+				}
+			}
+		}
+
+
+
+
+
+		// get all inventory-line elements
+		var all_inventory_line_elements = document.getElementsByTagName("inventory-line");
+
+		for (e of all_inventory_line_elements)
+		{
+			// console.log(e.getAttribute("content"));
+
+			if (!e.hasAttribute("content"))
+				continue;
+
+			const content_tokenized = e.getAttribute("content").split("_");
+
+			// set the correct spacings for the type of inventory line
+			switch(content_tokenized.length)
+			{
+				case 3:
+					e.style["grid-template-columns"] = "10mm 1fr max-content";
+					break;
+
+				case 4:
+					e.style["grid-template-columns"] = "10mm 1fr 11mm 8mm";
+					break;
+
+				case 5:
+					e.style["grid-template-columns"] = "10mm 10mm 1fr 11mm 8mm";
+					break;
+
+				case 6:
+					e.style["grid-template-columns"] = "10mm 10mm 11mm 1fr 11mm 8mm";
+					break;
+			}
+
+
+			for (token of content_tokenized)
+			{
+				var element;
+				if (token.includes("<") && token.includes(">"))
+				{
+					// console.log(token);
+					switch (token) {
+						case "<checkbox-circle>":
+							element = document.createElement("checkbox-circle");
+							// console.log("added");
+							break;
+					}
+				}
+				else
+				{
+					if (e.getAttribute("header"))
+						element = document.createElement("shaded-text");
+					else
+						element = document.createElement("text-underscore");
+
+					element.innerHTML = token;
+				}
+				
+				// console.log(token);
+				e.appendChild(element);
+			}
+		}
+
+	</script>
+</body>
+
+</html>

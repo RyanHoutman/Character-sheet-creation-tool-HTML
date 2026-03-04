@@ -1,0 +1,23 @@
+.text_notchedbox {
+	--notchSize: 0.7mm;
+	clip-path: polygon(
+	    0% 								var(--notchSize), 
+		var(--notchSize) 				0%, 
+		100% 							0%, 
+		100% 							calc(100% - var(--notchSize)), 
+		calc(100% - var(--notchSize)) 	100%, 
+		0% 								100%);
+	background-color: #cecece;
+}
+
+text_notchedbox {
+	--notchSize: 0.7mm;
+	clip-path: polygon(
+	    0% 								var(--notchSize), 
+		var(--notchSize) 				0%, 
+		100% 							0%, 
+		100% 							calc(100% - var(--notchSize)), 
+		calc(100% - var(--notchSize)) 	100%, 
+		0% 								100%);
+	background-color: #cecece;
+}

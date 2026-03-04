@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>James</title>
+  <link rel="stylesheet" href="./A4.css">
+
+  <script src="scripts/styles.js"></script> 
+  <script src="scripts/inventory_line.js"></script> 
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 20.2cm; 
+			height: 28.9cm;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 23mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of A4 -->
+
+			<!-- NAMEBOX -->
+			<grid-container style="
+				grid-row: 1;
+				grid-column: 1/3;
+				grid-template-columns: max-content max-content;
+			">
+				<div class=namebanner style="grid-column: 1; grid-row: 1; margin: 0 0.4cm">
+					<div class=name></div>
+					<div class=level></div>
+					<div class=box style="
+							grid-template-columns: repeat(3, 1fr);
+							grid-template-rows: repeat(2, 1fr);
+						">
+							<div class=text_lines>Race</div>
+							<div class=text_lines>Height</div>
+							<div class=text_lines>Weight</div>
+							<div class=text_lines>Class</div>
+							<div class=text_lines>Subclass</div>
+							<div class=text_lines>Alignment</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 1 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 1;
+			">
+
+				<!-- SPELL ATTACK BONUS, PACT SLOT LEVEL, INSPIRATION, SPELLSAVE -->
+				<div style="
+					/*grid-column: 1; grid-row: 2;*/
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, max-content);
+					align-content: start;
+					grid-column-gap: 1mm;
+					grid-row-gap: 0.5mm;
+					">
+
+					<div class=skill_banner>
+						<div class=banner><p>Proficiency bonus</p></div>
+						<img class=tag1 src="elements/smallbox_1.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Inspiration</p></div>
+						<img class=tag2 src="elements/smallbox_2.png">
+					</div>
+
+					<!-- <div class=skill_banner>
+						<div class=banner><p>Spell attack bonus</p></div>
+						<img class=tag3 src="elements/smallbox_3.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Spell save DC</p></div>
+						<img class=tag3 src="elements/smallbox_3.png">
+					</div> -->
+				</div>
+
+				<!-- STATS AND SKILLS -->
+				<div class=shadowbox>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Strength</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Strength Saving Throw</dt>
+							<dt class="skillProf">Athlethics</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Dexterity</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+							<dt class="skillProf">Acrobatics</dt>
+							<dt class="skillProf">Sleight of Hand</dt>
+							<dt class="skillProf">Stealth</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Constitution</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Constitution Saving Throw</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Intelligence</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+							<dt class="skillProf">Arcana</dt>
+							<dt class="skillProf">History</dt>
+							<dt class="skillProf">Investigation</dt>
+							<dt class="skillProf">Nature</dt>
+							<dt class="skillProf">Religion</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Wisdom</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+							<dt class="skillProf">Animal Handling</dt>
+							<dt class="skillProf">Insight</dt>
+							<dt class="skillProf">Medicine</dt>
+							<dt class="skillProf">Perception</dt>
+							<dt class="skillProf">Survival</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Charisma</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Charisma Saving Throw</dt>
+							<dt class="skillProf">Deception</dt>
+							<dt class="skillProf">Intimidation</dt>
+							<dt class="skillProf">Performance</dt>
+							<dt class="skillProf">Persuasion</dt>
+						</dl>
+					</div>
+				</div>
+
+				<!-- RACE AND BACKGROUND -->
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Race and Background</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Languages<hr></div>
+						<div class=text><center>Common, Dwarvish, Elvish</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Tools<hr></div>
+						<div class=text><center>Cards</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Weapons and Armour<hr></div>
+						<div class=text><center>All weapons, Light/Medium armour, Shields.</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Racial Features<hr></div>
+						<div class=text><b>Darkvision (120ft)</b>
+							<b>Dwarven Resilience</b> You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.
+
+							<b>Dwarven Toughness</b> Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.
+
+							<b>Stonecunning</b> As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.
+							You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Alert<hr></div>
+						<div class=text>Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 2 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 2;
+			">
+
+				<!-- SPELLSLOTS ->
+				<div class=textbox_big
+					style="
+						grid-template-columns: repeat(9, max-content);
+						justify-content: space-evenly;
+						">
+					<div class=boxLabelInside><b>Spellslots</b><hr></div>
+
+					<div class=spellslot_column>
+						<div class=header>1st</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>2nd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>3rd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>4th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>5th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>6th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>7th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>8th</div>
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>9th</div>
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+				</div><!-- -->
+
+				<!-- AC HITPOINTS INITIATIVE SPEED -->
+				<div class=shadowbox 
+					style="
+						grid-template-columns: repeat(3, max-content);
+						grid-template-rows: repeat(4, 1fr);
+						grid-auto-flow: column;
+					">
+
+					<div class="textbox_paper hpbox" style="grid-column: 1/3; grid-row: 1/3;">
+						<div class=simplebox>
+							<div class="boxLabelOutside">Maximum hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Current hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Temporary hitpoints</div>
+						</div>
+
+						<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+							<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+						</div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Rage</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Rage Damage</b></div>
+						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+					</div>
+
+					<div class=shieldbox>
+						<div class="boxLabelInside"><b>AC</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Initiative</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Speed</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+					</div>
+				</div>
+
+				<!-- ATTACKS -->
+				<div class=textbox_big>
+					<div class=boxLabelInside><b>Attacks</b><hr></div>
+					<div style="
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-row-gap: 0.5mm;
+						">
+						<div class=weapon_line_headers>
+							<div class=shaded_text>Weapon name</div>
+							<div class=shaded_text>Atk bonus</div>
+							<div class=shaded_text>Damage/type</div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+					</div>
+				</div><!---->
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Weapon Mastery</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Cleave<hr></div>
+						<div class=text>If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Vex<hr></div>
+						<div class=text>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Nick<hr></div>
+						<div class=text>When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Sap<hr></div>
+						<div class=text>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Slow<hr></div>
+						<div class=text>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.
+						</div>
+					</div>
+				</div>
+
+				<!-- SPELLS ->
+				<div class=textbox_big id=spellbox1
+					style="
+						/*grid-column: 2/4;*/
+						grid-template-columns: repeat(2, 1fr);
+						">
+					<div class=boxLabelInside><b>Prepared Spells</b><hr></div>
+
+					<template id=spell_line_template>
+						<div class=spell_line>
+							<div class=text_notchedbox></div>
+							<img src="elements/Checkbox.png">
+							<div class=text_underscore></div>
+						</div>
+					</template>
+					<script type="text/javascript">
+						// Repeat the template element 5 times 
+						for (let i = 0; i < 34; i++) { 
+						  document.getElementById('spellbox1').appendChild(document.getElementById('spell_line_template').content.cloneNode(true)); 
+						}
+					</script>
+				</div><!-- -->
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Personal Information</div>
+
+					<div class=textbox_stacked_lone>
+					<div class=boxLabelInside>Background<hr></div>
+
+						<div class=text>Ik werkte als guard op de Muur rondom Elturel. Ik ben ontslagen doordat een dare tussen mij en (tc) uit de hand liep. (Hoe precies idk, mis nog ff met Thomas kijken)
+					Heb op de muur veel gezien, voornamelijk de undead lieten een indruk achter. 
+					Vind de spanningen in de stad niet chill. Wil niet dat de stad weer terug gaat naar de tijd van 1444. 
+					Ik ben nu 70 jaar oud. Ik was 10 toen de undead de stad infested. Familie is toen dood gegaan. Ben er nog steeds niet overheen. 
+					Wil nu tegen de cult vechten om te zorgen dat de stad niet weer word overgenomen door dead and decay.
+
+
+
+
+					</div></div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 3 -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 3;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				<div class=textbox_stacked_top>
+					<div class=boxLabelInside>Rage<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>You can enter a rage as a Bonus Action if you aren't wearing Heavy armor. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. While active, your Rage follows the rules below.
+
+					- You have Resistance to Bludgeoning, Piercing, and Slashing damage.
+					- When you make an attack using Strength and deal damage to the target, you deal extra damage equal to your Rage Damage.
+					- You have Advantage on Strength checks and Strength saving throws.
+					- You can't maintain Concentration, and you can't cast spells.
+					
+					<b>Duration</b> The Rage lasts until the end of your next turn, and it ends early if you don Heavy armor or have the Incapacitated condition. If your Rage is still active on your next turn, you can extend the Rage for another round by doing one of the following:
+					- Make an attack roll against an enemy.
+					- Force an enemy to make a saving throw.
+					- Take a Bonus Action to extend your Rage.
+					You can maintain a Rage for up to 10 minutes.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Unarmored Defense<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Weapon Mastery<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices. The number of masteries increases to 3 at level 4 and 4 at level 10.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Danger Sense<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Reckless Attack<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on attack rolls using Strength until the start of your next turn, but attack rolls against you have Advantage during that time.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>‎<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Primal Knowledge<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>While your Rage is active, whenever you make an ability check using one of the following skills, you can make it as a Strength check even if it normally uses a different ability: Acrobatics, Intimidation, Perception, Stealth, or Survival.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>‎<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>4</div>
+					<div class=text>
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Extra Attack<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>You can attack twice instead of once whenever you take the Attack action on your turn.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Fast Movement<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>Your speed increases by 10 feet while you aren't wearing Heavy armor.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>‎<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>6</div>
+					<div class=text>
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+			
+
+
+			
+			<!-- end of the box of A4 -->
+		</div>
+	</div>
+</body>
+
+</html>

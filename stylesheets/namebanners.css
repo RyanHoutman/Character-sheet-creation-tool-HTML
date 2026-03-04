@@ -1,0 +1,91 @@
+.namebanner {
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+
+	width: 13cm;
+	padding-top: 2.28cm; /*17.6%; /*background image ratio*/
+
+	position: relative;
+}
+
+
+
+.namebanner .name {
+	position: absolute;
+    left: 5%;
+    right: 56%;
+    top: 38%;
+    bottom: 40%;
+    text-align: center;
+
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 20px;
+}
+
+
+.namebanner .box {
+	position: absolute;
+    top: 17%;
+    right: 16%;
+    bottom: 23%;
+    left: 47%;
+
+    display: grid;
+    align-items: end;
+
+}
+
+.namebanner .box .text_lines {
+	border-top: 0.4mm groove var(--lightgray);
+	width: 100%;
+	padding-top: 0.5mm;
+
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 6px;
+}
+
+.namebanner .level,
+.namebanner .level1,
+.namebanner .level2 {
+	position: absolute;
+    
+    text-align: center;
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 20px;
+}
+
+/* if the banner has only one level slot*/
+.namebanner:has(.level) {
+	background-image: url(../elements/namebanner_1.png);
+}
+
+.namebanner .level {
+    left: 92%;
+    right: 4.2%;
+    top: 65%;
+    bottom: 15%;
+}
+
+/* if the banner has two level slots*/
+.namebanner:has(.level1):has(.level2) {
+	background-image: url(../elements/namebanner_2.png);
+}
+
+.namebanner .level1{
+    left: 88.4%;
+    right: 8.1%;
+    top: 63%;
+    bottom: 17%;
+}
+
+.namebanner .level2{
+    left: 95%;
+    right: 1.6%;
+    top: 63%;
+    bottom: 17%;
+}
+

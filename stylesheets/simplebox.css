@@ -1,0 +1,73 @@
+.simplebox { 
+	--size: 1;
+	--borderScale: 1;
+	width: calc(18.5mm * var(--size));
+	height: calc(17mm * var(--size));
+	border-image-source: url(../elements/box_1.png);
+	border-image-repeat: stretch;
+	border-image-slice: 95 82 fill; 
+	border-image-width: calc(3mm * var(--borderScale));
+
+	position: relative;
+}
+
+.simplebox .boxLabelInside {
+	margin: 0 calc(1.5mm * var(--borderScale));
+	position: absolute;
+	top: 1mm;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.simplebox:has(>.boxLabelOutside) {
+	margin-top: 2.1mm;
+}
+
+.simplebox .boxLabelOutside {
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 6px;
+	width: 100%;
+
+	position: absolute;
+	top: -1.9mm;
+	left: 0mm;
+
+	text-align: center;
+}
+
+
+.shadowbox .simplebox .boxLabelOutside {
+	color: black;
+}
+
+.textbox_big .simplebox .boxLabelOutside,
+.hpbox .simplebox .boxLabelOutside {
+	color: var(--lightgray);
+}
+
+
+
+/*Max uses rule*/
+.simplebox .simplebox {
+	--size: 0.3;
+	--borderScale: 0.55;
+
+	margin-top: 0;
+
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+}
+
+.simplebox .simplebox .boxLabelOutside {
+	color: var(--lightgray);
+	font-size: 6px;
+
+	width: 10mm;
+
+	position: absolute;
+	left: -10mm;
+	top: 1.5mm;
+}

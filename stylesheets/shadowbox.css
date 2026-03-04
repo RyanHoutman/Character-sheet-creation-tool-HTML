@@ -1,0 +1,94 @@
+.shadowbox { 
+	width: stretch;
+	height: max-content;
+	margin: 1mm;
+	border-image-source: url(../elements/shadowbox.png);
+	border-image-repeat: stretch;
+	border-image-slice: 180 100 fill; 
+	border-image-width: 8mm 4mm;
+
+	padding: 2mm 2mm;
+
+	position: relative;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	align-content: start;
+    justify-items: center;
+    justify-content: space-evenly;
+	
+	grid-column-gap: 1mm;
+	grid-row-gap: 1mm;
+}
+
+
+.shadowbox > .boxLabelInside {
+	grid-column: 1/-1;
+	grid-row: 1;
+
+	text-align: center;
+
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--darkgray);
+}
+
+
+.shadowbox > .column {
+	grid-row: 1;
+
+	display: grid;
+	grid-row-gap: 1mm;
+}
+
+.shadowbox:has(:is(.shadowbox > .boxLabelInside)) > .column {
+	grid-row: 2;
+}
+
+
+
+shadow-box { 
+	width: 100%;
+	height: max-content;
+	border-image-source: url(../elements/shadowbox.png);
+	border-image-repeat: stretch;
+	border-image-slice: 180 100 fill; 
+	border-image-width: 8mm 4mm;
+
+	padding: 2mm 2mm;
+
+	position: relative;
+
+	display: grid;
+	align-content: start;
+    justify-items: center;
+    justify-content: space-evenly;
+
+    grid-auto-columns: 1fr;
+	
+	grid-column-gap: 1mm;
+	grid-row-gap: 1mm;
+}
+
+
+shadow-box > boxlabel-inside {
+	grid-column: 1/-1;
+	grid-row: 1;
+
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--darkgray);
+}
+
+
+shadow-box > column-container {
+	width: 100%;
+	grid-row: 1;
+
+	display: grid;
+	grid-row-gap: 1mm;
+}
+
+shadow-box:has(:is(shadow-box > boxlabel-inside)) > column-container {
+	grid-row: 2;
+}

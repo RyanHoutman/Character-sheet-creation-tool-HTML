@@ -1,0 +1,111 @@
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone) {
+	width: stretch;
+	height: auto;
+	border-image-repeat: stretch;
+
+	position: relative;
+
+	display: grid;
+	align-items: start;
+	align-content: start;
+	grid-column-gap: 1mm;
+	grid-row-gap: 0.5mm;
+}
+
+.textbox_stacked_top {
+	border-image-source: url(../elements/stackedbox_top.png);
+	border-image-slice: 92 100 26 fill; 
+	border-image-width: 3.5mm 4.5mm 1mm;
+
+	padding: 3mm 1mm 1.2mm 1mm
+}
+
+.textbox_stacked_middle {
+	border-image-source: url(../elements/stackedbox_middle.png);
+	border-image-slice: 26 100 26 fill; 
+	border-image-width: 1mm 4.5mm 1mm;
+
+	padding: 1.2mm 1mm 1.2mm 1mm;
+}
+
+.textbox_stacked_bottom {
+	border-image-source: url(../elements/stackedbox_bottom.png);
+	border-image-slice: 26 100 92 fill; 
+	border-image-width: 1mm 4.5mm 3.5mm;
+
+	padding: 1.2mm 1mm 3mm 1mm;
+}
+
+.textbox_stacked_lone {
+	border-image-source: url(../elements/stackedbox_lone.png);
+	border-image-slice: 92 100 92 fill; 
+	border-image-width: 3.5mm 4.5mm 3.5mm;
+
+	padding: 3mm 1mm 3mm 1mm;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone):has(.boxLabelInside) {
+	padding-top: 5mm;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone) .boxLabelInside {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	text-transform: none;
+	font-weight: bold;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone) .boxLabelInside hr {
+	width: 60%;
+	margin: 0.25mm 20% 0;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone):has(.leveltag) {
+	margin-top: 2mm;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone) .leveltag {
+	position: absolute;
+	top: -2mm;
+	right: -0.5mm;
+
+	width: 0.8cm;
+}
+
+:is(.textbox_stacked_top, .textbox_stacked_middle, .textbox_stacked_bottom, .textbox_stacked_lone) .leveltag_text {
+	position: absolute;
+	top: -0.7mm;
+	right: 0.8mm;
+	width: 5.3mm;
+
+	font-family: helvetica;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+
+
+/*
+<div class=textbox_stacked_[top middle bottom lone]>
+	<div class=boxLabelInside>TITLE<hr></div>
+	<img class=leveltag src="elements/smallbox_4.png">
+	<div class=leveltag_text>LEVEL</div>
+	<div class=text>TEXT
+	</div>
+</div>
+
+
+*/

@@ -1,0 +1,45 @@
+.statbox {
+	width: 60mm;
+	height: 24mm;
+	background-image: url(../elements/statbox1.png);
+	background-size: 100% 100%;
+
+	position: relative;
+}
+
+.statbox .boxLabelInside{
+	margin: 0 41.9mm 0 1.2mm;
+	position: absolute;
+	top: 1.8mm;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.statbox .skills{
+	position: absolute;
+	top: 2mm;
+	left: 21mm;
+	right: 0mm;
+
+	margin: 0;
+}
+
+.statbox .skills .savingThrowProf{
+	margin-left: 1.2mm;
+	margin-bottom: 0.4mm;
+	background-image: url(../elements/Savingthrow_prof_box.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+
+	padding: 0.7mm 0mm 0.1mm 10.5mm;
+}
+
+.statbox .skills .skillProf{
+	margin-bottom: 0.4mm;
+	background-image: url(../elements/Skill_prof_box.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+
+	padding: 0.7mm 0mm 0.1mm 11.7mm;
+}

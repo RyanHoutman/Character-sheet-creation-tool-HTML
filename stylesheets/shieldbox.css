@@ -1,0 +1,21 @@
+.shieldbox { 
+	width: 16.8mm;
+	/*height: 19mm;*/
+	height: 16.8;
+	background-image: url(../elements/shield.png);
+	background-size: 100% 100%;
+
+	position: relative;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.shieldbox > .boxLabelInside{
+	margin: 0 30%;
+	position: absolute;
+	top: 2mm;
+	left: 0;
+	right: 0;
+	text-align: center;
+}

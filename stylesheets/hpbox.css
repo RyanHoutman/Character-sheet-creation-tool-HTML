@@ -1,0 +1,66 @@
+.hpbox {
+	width: max-content;
+	height: auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 1mm;
+    align-items: end;
+    align-content: space-between;
+    justify-items: center;
+    margin: 0;
+    padding-bottom: 1.5mm;
+}
+
+.hpbox .simplebox {
+	--size: 0.6;
+	--borderScale: 1;
+	margin: 0;
+}
+
+.hpbox .simplebox .boxLabelOutside {
+	text-transform: none;
+	top: 11mm;
+}
+
+.hpbox .levelup_hp {
+	height: max-content;
+
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+    align-items: end;
+    justify-content: center;
+}
+
+.hpbox .levelup_hp .simplebox {
+	--size: 0.19;
+	--borderScale: 0.37;
+	margin: 0;
+}
+
+.hpbox .levelup_hp .boxLabelOutside {
+	text-transform: none;
+	font-weight: bold;
+	font-family: helvetica;
+	font-size: 6px;
+	width: 100%;
+    text-align: center;
+	color: var(--lightgray);
+}
+
+
+/*.hpbox .simplebox:nth-of-type(1) .boxLabelOutside {
+	left: 0.9cm;
+	top: 0cm;
+}
+.hpbox .simplebox:nth-of-type(2) .boxLabelOutside {
+	text-align: right;
+	left: -105%;
+	top: 0cm;
+}
+.hpbox .simplebox:nth-of-type(3) .boxLabelOutside {
+	left: 100%;
+	top: auto;
+	bottom: 0cm;
+}*/

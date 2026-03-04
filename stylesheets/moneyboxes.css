@@ -1,0 +1,16 @@
+money-box {
+	grid-column: auto / span 2;
+
+	display: grid;
+	justify-items: center; 
+	grid-row-gap: 0.5mm;
+}
+
+money-box img {
+	width: 1.3cm;
+}
+
+money-box boxlabel-outside {
+	font-size: 8px;
+	color: var(--darkgray);
+}

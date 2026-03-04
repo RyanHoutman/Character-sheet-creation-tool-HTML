@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thomas</title>
+  <link rel="stylesheet" href="./A4.css">
+
+  <script src="scripts/styles.js"></script> 
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 20.2cm; 
+			height: 28.9cm;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 23mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of A4 -->
+
+			<!-- NAMEBOX -->
+			<grid-container style="
+				grid-row: 1;
+				grid-column: 1/3;
+				grid-template-columns: max-content max-content;
+			">
+				<div class=namebanner style="grid-column: 1; grid-row: 1; margin: 0 0.4cm">
+					<div class=name></div>
+					<div class=level></div>
+					<div class=box style="
+							grid-template-columns: repeat(3, 1fr);
+							grid-template-rows: repeat(2, 1fr);
+						">
+							<div class=text_lines>Race</div>
+							<div class=text_lines>Height</div>
+							<div class=text_lines>Weight</div>
+							<div class=text_lines>Class</div>
+							<div class=text_lines>Subclass</div>
+							<div class=text_lines>Alignment</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 1 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 1;
+			">
+
+				<!-- SPELL ATTACK BONUS, PACT SLOT LEVEL, INSPIRATION, SPELLSAVE -->
+				<div style="
+					/*grid-column: 1; grid-row: 2;*/
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, max-content);
+					align-content: start;
+					grid-column-gap: 1mm;
+					grid-row-gap: 0.5mm;
+					">
+
+					<div class=skill_banner>
+						<div class=banner><p>Proficiency bonus</p></div>
+						<img class=tag1 src="elements/smallbox_1.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Inspiration</p></div>
+						<img class=tag2 src="elements/smallbox_2.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Spell attack bonus</p></div>
+						<img class=tag3 src="elements/smallbox_3.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Spell save DC</p></div>
+						<img class=tag3 src="elements/smallbox_3.png">
+					</div>
+				</div>
+
+				<!-- STATS AND SKILLS -->
+				<div class=shadowbox>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Strength</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Strength Saving Throw</dt>
+							<dt class="skillProf">Athlethics</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Dexterity</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+							<dt class="skillProf">Acrobatics</dt>
+							<dt class="skillProf">Sleight of Hand</dt>
+							<dt class="skillProf">Stealth</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Constitution</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Constitution Saving Throw</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Intelligence</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+							<dt class="skillProf">Arcana</dt>
+							<dt class="skillProf">History</dt>
+							<dt class="skillProf">Investigation</dt>
+							<dt class="skillProf">Nature</dt>
+							<dt class="skillProf">Religion</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Wisdom</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+							<dt class="skillProf">Animal Handling</dt>
+							<dt class="skillProf">Insight</dt>
+							<dt class="skillProf">Medicine</dt>
+							<dt class="skillProf">Perception</dt>
+							<dt class="skillProf">Survival</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Charisma</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Charisma Saving Throw</dt>
+							<dt class="skillProf">Deception</dt>
+							<dt class="skillProf">Intimidation</dt>
+							<dt class="skillProf">Performance</dt>
+							<dt class="skillProf">Persuasion</dt>
+						</dl>
+					</div>
+				</div>
+
+				<!-- RACE AND BACKGROUND -->
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Race and Background</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Languages<hr></div>
+						<div class=text><center>Common, Dwarvish, Draconic</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Tools<hr></div>
+						<div class=text><center>Dice</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Weapons and Armour<hr></div>
+						<div class=text><center>All weapons, All armour, Shields.</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Racial Features<hr></div>
+						<div class=text><b>Darkvision (120ft)</b>
+							<b>Dwarven Resilience</b> You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.
+							<b>Dwarven Toughness</b> Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.
+							<b>Stonecunning</b> As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.
+							You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Alert<hr></div>
+						<div class=text>Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 2 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 2;
+			">
+
+				<!-- SPELLSLOTS FULLCASTER ->
+				<div class=textbox_big
+					style="
+						grid-template-columns: repeat(9, max-content);
+						justify-content: space-evenly;
+						">
+					<div class=boxLabelInside><b>Spellslots</b><hr></div>
+
+					<div class=spellslot_column>
+						<div class=header>1st</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>2nd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>3rd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>4th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>5th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>6th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>7th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>8th</div>
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+					<div class=spellslot_column>
+						<div class=header>9th</div>
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+				</div><!-- -->
+
+				<!-- SPELLSLOTS HALFCASTER ->
+				<div class=textbox_big
+					style="
+						grid-template-columns: repeat(5, max-content);
+						justify-content: space-evenly;
+						">
+					<div class=boxLabelInside><b>Spellslots</b><hr></div>
+
+					<div class=spellslot_column>
+						<div class=header>1st</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>2nd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>3rd</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>4th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+
+					<div class=spellslot_column>
+						<div class=header>5th</div>
+						<img src="elements/Checkbox_dubble.png">
+						<img src="elements/Checkbox_dubble.png">
+					</div>
+				</div><!-- -->
+
+				<!-- AC HITPOINTS INITIATIVE SPEED -->
+				<div class=shadowbox 
+					style="
+						grid-template-columns: repeat(3, max-content);
+						grid-template-rows: repeat(4, 1fr);
+						grid-auto-flow: column;
+					">
+
+					<div class="textbox_paper hpbox" style="grid-column: 1/3; grid-row: 1/3;">
+						<div class=simplebox>
+							<div class="boxLabelOutside">Maximum hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Current hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Temporary hitpoints</div>
+						</div>
+
+						<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+							<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+						</div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Lay on Hands</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Pool size</div></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Channel Divinity</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Paladin's Smite</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Faithful Steed</b></div>
+					</div>
+
+					<div class=shieldbox>
+						<div class="boxLabelInside"><b>AC</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Initiative</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Speed</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+					</div>
+				</div>
+
+				<!-- ATTACKS -->
+				<div class=textbox_big>
+					<div class=boxLabelInside><b>Attacks</b><hr></div>
+					<div style="
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-row-gap: 0.5mm;
+						">
+						<div class=weapon_line_headers>
+							<div class=shaded_text>Weapon name</div>
+							<div class=shaded_text>Atk bonus</div>
+							<div class=shaded_text>Damage/type</div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+					</div>
+				</div><!---->
+
+				<!-- <div class=textbox_big>
+					<div class=boxLabelInside><b>‎</b><hr></div>
+					<div class=text>
+
+
+
+
+
+
+
+					</div>
+				</div> -->
+
+				<!-- SPELLS ->
+				<div class=textbox_big id=spellbox1
+					style="
+						/*grid-column: 2/4;*/
+						grid-template-columns: repeat(2, 1fr);
+						">
+					<div class=boxLabelInside><b>Prepared Spells</b><hr></div>
+
+					<template id=spell_line_template>
+						<div class=spell_line>
+							<div class=text_notchedbox></div>
+							<img src="elements/Checkbox.png">
+							<div class=text_underscore></div>
+						</div>
+					</template>
+					<script type="text/javascript">
+						// Repeat the template element 5 times 
+						for (let i = 0; i < 18; i++) { 
+						  document.getElementById('spellbox1').appendChild(document.getElementById('spell_line_template').content.cloneNode(true)); 
+						}
+					</script>
+				</div><!-- -->
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Weapon Mastery</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Weapon Mastery<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>1</div>
+						<div class=text>Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency. Whenever you finish a Long Rest, you can change the kinds of weapons you chose.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Push<hr></div>
+						<div class=text>If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>‎<hr></div>
+						<div class=text>
+							
+
+
+
+
+
+
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>‎<hr></div>
+						<div class=text>
+							
+
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Personal Information</div>
+
+					<div class=textbox_stacked_lone>
+						<div class=boxLabelInside>Backstory<hr></div>
+						<div class=text>The clan of Flameforge is known for there Smiths, I wanted to follow in my father's footsteps but my allergy to precious metals made it impossible. I must find another way to bring glory to my clan, no matter the cost.
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 3 -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 3;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				<div class=textbox_stacked_top>
+					<div class=boxLabelInside>Spellcasting<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text><b>Changing Your Prepared Spells</b> Whenever you finish a Long Rest, you can replace one spell on your list with another Paladin spell for which you have spell slots.
+						<b>Spellcasting Ability</b> Charisma is your spellcasting ability for your Paladin spells.
+						<b>Spellcasting Focus</b> You can use a Holy Symbol as a Spellcasting Focus for your Paladin spells.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Lay on Hands<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you finish a Long Rest. With that pool, you can restore a total number of Hit Points equal to five times your Paladin level.
+
+					As a Bonus Action, you can touch a creature (which could be yourself) and draw power from the pool of healing to restore a number of Hit Points to that creature, up to the maximum amount remaining in the pool.
+
+					You can also expend 5 Hit Points from the pool of healing power to remove the Poisoned condition from the creature; those points don't also restore Hit Points to the creature.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Paladin's Smite<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>You always have the <i>Divine Smite</i> spell prepared. In addition, you can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Channel Divinity<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class's Channel Divinity, you choose which effect from this class to create.
+						You regain one use when you finish a Short Rest, and you regain all uses when you finish a Long Rest. If a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.
+
+						<b>Divine Sense</b> As a Bonus Action, you can open your awareness to detect Celestials, Fiends, and Undead. For the next 10 minutes or until you have the Incapacitated condition, you know the location of any creature of those types within 60 feet of yourself, and you know its creature type. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the Hallow spell.
+
+						<b>Peerless Athlete</b> As a Bonus Action, augment your athleticism. For 1 hour, you have Advantage on Strength (Athletics) and Dexterity (Acrobatics) checks, and the distance of your Long and High Jumps increases by 10 feet (this extra distance costs movement as normal).
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Inspiring Smite<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>Immediately after you cast Divine Smite, you can expend one use of your Channel Divinity and distribute Temporary Hit Points to creatures of your choice within 30 feet of yourself, which can include you. The total number of Temporary Hit Points equals 2d8 plus your Paladin level, divided among the chosen creatures however you like.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Shield Master<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>4</div>
+					<div class=text><b>Shield Bash</b> If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it's equipped, forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the Prone condition (your choice). You can use this benefit only once on each of your turns.
+
+					<b>Interpose Shield</b> If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Extra Attack<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>You can attack twice instead of once whenever you take the Attack action on your turn.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Faithful Steed<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>You always have the <i>Find Steed</i> spell prepared. You can cast the spell once without expending a spell slot, and you regain the ability to do so when you finish a Long Rest.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Aura of Protection<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>6</div>
+					<div class=text>You radiate a protective, unseeable aura in a 10-foot Emanation that originates from you. The aura is inactive while you have the Incapacitated condition. You and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Aura of Alacrity<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>Whenever an ally enters your Aura of Protection for the first time on a turn or starts their turn there, the ally's Speed increases by 10 feet until the end of their next turn.
+					</div>
+				</div>
+			</div>
+
+
+			
+
+
+			
+			<!-- end of the box of A4 -->
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		var all_inventory_sections = document.getElementsByTagName("inventory-section");
+
+		for (e of all_inventory_sections)
+		{
+			// console.log(e.getAttribute("content"));
+			const content_tokenized = e.hasAttribute("content") ? e.getAttribute("content").split("\n") : [];
+
+
+			const content_exclude_tokenized = e.hasAttribute("content_exclude") ? e.getAttribute("content_exclude").split("\n") : [];
+
+			const header_tokenized = e.hasAttribute("header") ? e.getAttribute("header").split("_") : [];
+			const parser_tokenized = e.hasAttribute("parser") ? e.getAttribute("parser").split("_") : [];
+
+			const emptyrows = e.hasAttribute("emptyrows") ? e.getAttribute("emptyrows") : 0;
+			const rowheight = e.hasAttribute("height") ? e.getAttribute("height") : "low";
+
+			// create the header
+			for (h of header_tokenized)
+			{
+				item = document.createElement("shaded-text");
+				item.innerHTML = h;
+				e.appendChild(item);
+			}
+
+			// set the column width and count
+			style_string = "";
+			for (h of header_tokenized)
+			{
+				switch (h)
+				{
+					case "ITEM": style_string += "1fr "; break;
+					case "PLACE": style_string += "minmax(15mm, max-content) "; break;
+					default: style_string += "minmax(7mm, max-content) "; break;
+				}					
+			}
+			e.style["grid-template-columns"] = style_string;
+
+
+			// set the row spacing according to height
+			switch (rowheight)
+			{
+				case "low":
+					e.style["grid-row-gap"] = "0.5mm";
+					break;
+				case "high":
+					e.style["grid-row-gap"] = "2mm";
+					break;
+			}
+			
+
+
+			// set the content
+			// ignore the first enter
+			for (var i=1; i < content_tokenized.length; i += parser_tokenized.length)
+			{
+				if (content_exclude_tokenized.includes(content_tokenized[i+parser_tokenized.indexOf("ITEM")]))
+					continue;
+
+
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+
+					if (parser_tokenized.includes(h))
+						item.innerHTML = content_tokenized[i+parser_tokenized.indexOf(h)];
+
+					e.appendChild(item);
+				}
+			}
+
+
+			for (var i=0; i < emptyrows; i++)
+			{
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+					e.appendChild(item);
+				}
+			}
+		}
+
+
+
+
+
+		// get all inventory-line elements
+		var all_inventory_line_elements = document.getElementsByTagName("inventory-line");
+
+		for (e of all_inventory_line_elements)
+		{
+			// console.log(e.getAttribute("content"));
+
+			if (!e.hasAttribute("content"))
+				continue;
+
+			const content_tokenized = e.getAttribute("content").split("_");
+
+			// set the correct spacings for the type of inventory line
+			switch(content_tokenized.length)
+			{
+				case 3:
+					e.style["grid-template-columns"] = "10mm 1fr max-content";
+					break;
+
+				case 4:
+					e.style["grid-template-columns"] = "10mm 1fr 11mm 8mm";
+					break;
+
+				case 5:
+					e.style["grid-template-columns"] = "10mm 10mm 1fr 11mm 8mm";
+					break;
+
+				case 6:
+					e.style["grid-template-columns"] = "10mm 10mm 11mm 1fr 11mm 8mm";
+					break;
+			}
+
+
+			for (token of content_tokenized)
+			{
+				var element;
+				if (token.includes("<") && token.includes(">"))
+				{
+					// console.log(token);
+					switch (token) {
+						case "<checkbox-circle>":
+							element = document.createElement("checkbox-circle");
+							// console.log("added");
+							break;
+					}
+				}
+				else
+				{
+					if (e.getAttribute("header"))
+						element = document.createElement("shaded-text");
+					else
+						element = document.createElement("text-underscore");
+
+					element.innerHTML = token;
+				}
+				
+				// console.log(token);
+				e.appendChild(element);
+			}
+		}
+
+	</script>
+</body>
+
+</html>

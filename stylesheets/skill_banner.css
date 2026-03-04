@@ -1,0 +1,44 @@
+.skill_banner {
+	width: 100%;
+	height: 0.9cm;
+
+	position: relative;
+}
+
+
+.skill_banner .banner{
+	width: auto;
+	height: 66%;
+	margin: 0.15cm 0 0.15cm 0.2cm;
+	border-image-source: url(../elements/box_1.png);
+	border-image-repeat: stretch;
+	border-image-slice: 95 82 fill; 
+	border-image-width: 3mm;
+
+	padding: 1mm 2mm 1mm 7mm;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.skill_banner .tag1 {
+	height: 100%;
+	position: absolute;
+	top: 0cm;
+	left: 0cm;
+}
+
+.skill_banner .tag2 {
+	height: 95%;
+	position: absolute;
+	top: 2.5%;
+	left: 0cm;
+}
+
+.skill_banner .tag3 {
+	height: 100%;
+	position: absolute;
+	top: 0cm;
+	left: 0cm;
+}

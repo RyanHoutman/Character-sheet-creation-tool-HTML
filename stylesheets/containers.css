@@ -1,0 +1,15 @@
+grid-container {
+	width: stretch;
+	height: max-content;
+
+	display: grid;
+    justify-items: center;
+    /*grid-row-gap: 1mm;*/
+    /*grid-column-gap: 1mm;*/
+}
+
+column-container {
+	width: stretch;
+	display: grid;
+	grid-row-gap: 1mm;
+}

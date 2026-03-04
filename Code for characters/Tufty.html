@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A4 Paper</title>
+  <link rel="stylesheet" href="./A4.css">
+
+  <!-- General styles -->
+  <link rel="stylesheet" href="stylesheets/colors.css"/>
+  <link rel="stylesheet" href="stylesheets/fonts.css"/>
+
+  <!-- Player fillable boxes -->
+  <link rel="stylesheet" href="stylesheets/simplebox.css"/>
+  <link rel="stylesheet" href="stylesheets/shieldbox.css"/>
+  <link rel="stylesheet" href="stylesheets/text_notchedbox.css"/>
+  <link rel="stylesheet" href="stylesheets/checkboxes.css"/>
+  <link rel="stylesheet" href="stylesheets/moneyboxes.css"/>
+
+  <!-- Large containers capable of being player fillable or filled with smaller items -->
+  <link rel="stylesheet" href="stylesheets/namebanners.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_big.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_paper.css"/>
+  <link rel="stylesheet" href="stylesheets/textbox_stacked.css"/>
+  <link rel="stylesheet" href="stylesheets/shadowbox.css"/>
+
+  <!-- Layout rules for certain specific goal groupings -->
+  <link rel="stylesheet" href="stylesheets/containers.css"/>
+  <link rel="stylesheet" href="stylesheets/statbox.css"/>
+  <link rel="stylesheet" href="stylesheets/skill_banner.css"/>
+  <link rel="stylesheet" href="stylesheets/hpbox.css"/>
+  <link rel="stylesheet" href="stylesheets/weapon_line.css"/>
+  <link rel="stylesheet" href="stylesheets/spellslot_column.css"/>
+  <link rel="stylesheet" href="stylesheets/spell_line.css"/>
+  <link rel="stylesheet" href="stylesheets/inventory_line.css"/>
+  <link rel="stylesheet" href="stylesheets/ability_trackers.css"/>
+  <link rel="stylesheet" href="stylesheets/profiency_checkbox.css"/>
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 16cm; 
+			height: 22cm;
+			display: grid;
+			grid-template-columns: max-content 1fr max-content;
+			grid-template-rows: 27mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of 16cm by 22cm -->
+
+			<div class=namebanner style="grid-column: 1/4; grid-row: 1; width: 15cm; margin: 0 0.4cm">
+				<div class=name></div>
+				<div class=level></div>
+				<div class=box style="
+						grid-template-columns: repeat(3, 1fr);
+						grid-template-rows: repeat(2, 1fr);
+					">
+						<div class=text_lines>Race</div>
+						<div class=text_lines>Height</div>
+						<div class=text_lines>Weight</div>
+						<div class=text_lines>Class</div>
+						<div class=text_lines>Subclass</div>
+						<div class=text_lines>Alignment</div>
+				</div>
+			</div>
+
+
+
+			<!-- SPELL ATTACK BONUS, PACT SLOT LEVEL, INSPIRATION, SPELLSAVE -->
+			<div style="
+				/*grid-column: 1; grid-row: 2;*/
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, max-content);
+				align-content: start;
+				grid-column-gap: 1mm;
+				grid-row-gap: 0.5mm;
+				">
+
+				<div class=skill_banner>
+					<div class=banner><p>Pact magic level</p></div>
+					<img class=tag1 src="elements/smallbox_1.png">
+				</div>
+
+				<div class=skill_banner>
+					<div class=banner><p>Inspiration</p></div>
+					<img class=tag2 src="elements/smallbox_2.png">
+				</div>
+
+				<div class=skill_banner>
+					<div class=banner><p>Spell attack bonus</p></div>
+					<img class=tag3 src="elements/smallbox_3.png">
+				</div>
+
+				<div class=skill_banner>
+					<div class=banner><p>Spell save DC</p></div>
+					<img class=tag3 src="elements/smallbox_3.png">
+				</div>
+			</div>
+
+
+
+			<!-- STATS AND SKILLS -->
+			<div class=shadowbox style="grid-column: 1; grid-row: 3/-1;">
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Strength</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Strength Saving Throw</dt>
+						<dt class="skillProf">Athlethics</dt>
+					</dl>
+				</div>
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Dexterity</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+						<dt class="skillProf">Acrobatics</dt>
+						<dt class="skillProf">Sleight of Hand</dt>
+						<dt class="skillProf">Stealth</dt>
+					</dl>
+				</div>
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Constitution</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Constitution Saving Throw</dt>
+					</dl>
+				</div>
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Intelligence</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+						<dt class="skillProf">Arcana</dt>
+						<dt class="skillProf">History</dt>
+						<dt class="skillProf">Investigation</dt>
+						<dt class="skillProf">Nature</dt>
+						<dt class="skillProf">Religion</dt>
+					</dl>
+				</div>
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Wisdom</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+						<dt class="skillProf">Animal Handling</dt>
+						<dt class="skillProf">Insight</dt>
+						<dt class="skillProf">Medicine</dt>
+						<dt class="skillProf">Perception</dt>
+						<dt class="skillProf">Survival</dt>
+					</dl>
+				</div>
+
+				<div class=statbox>
+					<div class="boxLabelInside"><b>Charisma</b></div>
+					<dl class="skills">
+						<dt class="savingThrowProf">Charisma Saving Throw</dt>
+						<dt class="skillProf">Deception</dt>
+						<dt class="skillProf">Intimidation</dt>
+						<dt class="skillProf">Performance</dt>
+						<dt class="skillProf">Persuasion</dt>
+					</dl>
+				</div>
+			</div>
+
+
+			<!-- ARMOUR PROFICIENCIES -->
+			<div class=textbox_paper 
+				style="
+					grid-column: 3; grid-row: 2/4; height: auto;
+
+					display: grid;
+					grid-template-columns: repeat(3, max-content);
+					justify-content: space-evenly;
+					align-content: space-evenly;
+					">
+
+				<div class=boxLabelInside><b>proficiencies</b><hr></div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>L. Armor</div>
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>M. Armor</div>
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>H. Armor</div>
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>S. Weapons</div>
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>M. Weapons</div>
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=profiency_checkbox>
+					<div class=boxLabelOutside>Shields</div>
+					<img src="elements/Checkbox.png">
+				</div>
+			</div>
+
+
+
+			<!-- SPELLSLOTS -->
+			<div class=textbox_big
+				style="
+					grid-column: 2; grid-row: 2/4;
+					grid-template-columns: repeat(5, max-content);
+					justify-content: space-evenly;
+					">
+				<div class=boxLabelInside><b>Spellslots</b><hr></div>
+
+				<div class=spellslot_column style="grid-template-columns: 1fr 1fr">
+					<div class=header style="grid-column: 1/3">Pact slots</div>
+					<img src="elements/Checkbox.png">
+					<img src="elements/Checkbox.png">
+					<img src="elements/Checkbox.png">
+					<img src="elements/Checkbox.png">
+				</div>
+
+				<div class=spellslot_column>
+					<div class=header>6th</div>
+					<img src="elements/Checkbox.png">
+				</div>
+				<div class=spellslot_column>
+					<div class=header>7th</div>
+					<img src="elements/Checkbox.png">
+				</div>
+				<div class=spellslot_column>
+					<div class=header>8th</div>
+					<img src="elements/Checkbox.png">
+				</div>
+				<div class=spellslot_column>
+					<div class=header>9th</div>
+					<img src="elements/Checkbox.png">
+				</div>
+			</div>
+
+
+			<!-- AC HITPOINTS INITIATIVE SPEED -->
+			<div class=shadowbox 
+				style="
+					grid-column: 2/4; grid-row: 4;
+					grid-template-columns: repeat(2, max-content);
+					grid-template-rows: repeat(3, 1fr);
+					grid-auto-flow: column;
+				">
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b></b></div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b></b></div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b></b></div>
+				</div>
+
+
+				<div class="textbox_paper hpbox" style="grid-column: 2/4; grid-row: 1/3;">
+					<div class=simplebox>
+						<div class="boxLabelOutside">Maximum hitpoints</div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelOutside">Current hitpoints</div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelOutside">Temporary hitpoints</div>
+					</div>
+
+					<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+						<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+						<div class=simplebox></div>
+					</div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b></b></div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b>Magical cunning</b></div>
+				</div>
+
+				<div class=shieldbox>
+					<div class="boxLabelInside"><b>AC</b></div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b>Initiative</b></div>
+				</div>
+
+				<div class=simplebox>
+					<div class="boxLabelInside"><b>Speed</b></div>
+				</div>
+			</div>
+
+
+
+			<!-- ATTACKS -->
+			<div class=textbox_big style="grid-column: 2/4;/* grid-row: z;*/">
+				<div class=boxLabelInside><b>Attacks</b><hr></div>
+				<div style="
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-row-gap: 0.5mm;
+					">
+					<div class=weapon_line_headers>
+						<div class=shaded_text>Weapon name</div>
+						<div class=shaded_text>Atk bonus</div>
+						<div class=shaded_text>Damage/type</div>
+					</div>
+					<div class=weapon_line>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+					</div>
+					<div class=weapon_line>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+					</div>
+					<div class=weapon_line>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+					</div>
+					<div class=weapon_line>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+						<div class=text_notchedbox></div>
+					</div>
+				</div>
+			</div>
+			
+
+
+			<!-- SPELLS -->
+			<div class=textbox_big id=spellbox1
+				style="
+					grid-column: 2/4; /*grid-row: 5;*/
+					grid-template-columns: repeat(2, 1fr);
+					">
+				<div class=boxLabelInside><b>Prepared Spells</b><hr></div>
+
+				<template id=spell_line_template>
+					<div class=spell_line>
+						<div class=text_notchedbox></div>
+						<img src="elements/Checkbox.png">
+						<div class=text_underscore></div>
+					</div>
+				</template>
+				<script type="text/javascript">
+					// Repeat the template element 5 times 
+					for (let i = 0; i < 40; i++) { 
+					  document.getElementById('spellbox1').appendChild(document.getElementById('spell_line_template').content.cloneNode(true)); 
+					}
+				</script>
+			</div>
+
+
+
+			<!-- end of the box of 16 by 22 -->
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 16cm; 
+			height: 22cm;
+			display: grid;
+			grid-template-columns: 2fr 3fr;
+			grid-template-rows: repeat(2, 1fr);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of 16cm by 22cm -->
+
+			<!-- INVOCATIONS -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1/-1;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Invocations</div>
+
+				<div class=textbox_stacked_top>
+					<div class=boxLabelInside>Pact of the Tome<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This Book of Shadows (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The book disappears if you conjure another book with this feature or if you die.
+
+					Cantrips and Rituals. When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells you don't already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+
+				
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Misty Visions<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>You can cast Silent Image without expending a spell slot.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Mask of Many Faces<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>You can cast Disguise Self without expending a spell slot.
+					</div>
+				</div>
+
+				
+			</div>
+
+
+			<!-- CLASS AND SUBCLASS -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 2;
+
+					display: grid;
+					grid-row-gap: 0.5mm;
+					grid-column-gap: 1mm;
+
+					grid-template-columns: 1fr 1fr;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				<div class=column>
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Magical Cunning<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>2</div>
+						<div class=text>You can perform an esoteric rite for 1 minute. At the end of it, you regain expended Pact Magic spell slots but no more than a number equal to half your maximum (round up). You can use this feature only once per Long Rest.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Archfey Spells<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>3</div>
+						<div class=text>The magic of your patron ensures you always have certain spells ready; when you reach a Warlock level specified in the Archfey Spells table, you thereafter always have the listed spells prepared.
+
+							Calm Emotions, Faerie Fire, Misty Step, Phantasmal Force, Sleep
+						</div>
+					</div>
+
+					
+
+					
+				</div>
+
+				<div class=column>
+					<div class=textbox_stacked_lone>
+						<div class=boxLabelInside>Steps of the Fey<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>4</div>
+						<div class=text>Your patron grants you the ability to move between the boundaries of the planes. You can cast Misty Step without expending a spell slot a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.
+
+In addition, whenever you cast that spell, you can choose one of the following additional effects.
+
+Refreshing Step. Immediately after you teleport, you or one creature you can see within 10 feet of yourself gains 1d10 Temporary Hit Points.
+
+Taunting Step. Creatures within 5 feet of the space you left must succeed on a Wisdom saving throw against your spell save DC or have Disadvantage on attack rolls against creatures other than you until the start of your next turn.
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+
+
+			<!-- RACE AND BACKGROUND -->
+			<div class=shadowbox 
+				style="
+					grid-column: 2;
+					grid-row: 2;
+					grid-row-gap: 0.5mm;
+					grid-column-gap: 1mm;
+
+					grid-template-columns: 1fr 1fr;
+				">
+				<div class=boxLabelInside>Race and Background</div>
+
+				<div class=column>
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Darkvision<hr></div>
+						<div class=text>You have Darkvision with a range of 60 feet.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Gnomish Cunning<hr></div>
+						<div class=text>You have Advantage on Intelligence, Wisdom, and Charisma saving throws
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Rock Gnome<hr></div>
+						<div class=text>You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.
+						</div>
+					</div>
+				</div>
+
+				<div class=column>
+					<div class=textbox_stacked_lone>
+						<div class=boxLabelInside>Magic Initiate<hr></div>
+						<div class=text>Two Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).
+
+
+
+
+
+Level 1 Spell. Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.
+
+
+
+
+
+Spell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- end of the box of 16 by 22 -->
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		var all_inventory_sections = document.getElementsByTagName("inventory-section");
+
+		for (e of all_inventory_sections)
+		{
+			// console.log(e.getAttribute("content"));
+			const content_tokenized = e.hasAttribute("content") ? e.getAttribute("content").split("\n") : [];
+
+
+			const content_exclude_tokenized = e.hasAttribute("content_exclude") ? e.getAttribute("content_exclude").split("\n") : [];
+
+			const header_tokenized = e.hasAttribute("header") ? e.getAttribute("header").split("_") : [];
+			const parser_tokenized = e.hasAttribute("parser") ? e.getAttribute("parser").split("_") : [];
+
+			const emptyrows = e.hasAttribute("emptyrows") ? e.getAttribute("emptyrows") : 0;
+			const rowheight = e.hasAttribute("height") ? e.getAttribute("height") : "low";
+
+			// create the header
+			for (h of header_tokenized)
+			{
+				item = document.createElement("shaded-text");
+				item.innerHTML = h;
+				e.appendChild(item);
+			}
+
+			// set the column width and count
+			style_string = "";
+			for (h of header_tokenized)
+			{
+				switch (h)
+				{
+					case "ITEM": style_string += "1fr "; break;
+					case "PLACE": style_string += "minmax(15mm, max-content) "; break;
+					default: style_string += "minmax(7mm, max-content) "; break;
+				}					
+			}
+			e.style["grid-template-columns"] = style_string;
+
+
+			// set the row spacing according to height
+			switch (rowheight)
+			{
+				case "low":
+					e.style["grid-row-gap"] = "0.5mm";
+					break;
+				case "high":
+					e.style["grid-row-gap"] = "2mm";
+					break;
+			}
+			
+
+
+			// set the content
+			// ignore the first enter
+			for (var i=1; i < content_tokenized.length; i += parser_tokenized.length)
+			{
+				if (content_exclude_tokenized.includes(content_tokenized[i+parser_tokenized.indexOf("ITEM")]))
+					continue;
+
+
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+
+					if (parser_tokenized.includes(h))
+						item.innerHTML = content_tokenized[i+parser_tokenized.indexOf(h)];
+
+					e.appendChild(item);
+				}
+			}
+
+
+			for (var i=0; i < emptyrows; i++)
+			{
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+					e.appendChild(item);
+				}
+			}
+		}
+
+
+
+
+
+		// get all inventory-line elements
+		var all_inventory_line_elements = document.getElementsByTagName("inventory-line");
+
+		for (e of all_inventory_line_elements)
+		{
+			// console.log(e.getAttribute("content"));
+
+			if (!e.hasAttribute("content"))
+				continue;
+
+			const content_tokenized = e.getAttribute("content").split("_");
+
+			// set the correct spacings for the type of inventory line
+			switch(content_tokenized.length)
+			{
+				case 3:
+					e.style["grid-template-columns"] = "10mm 1fr max-content";
+					break;
+
+				case 4:
+					e.style["grid-template-columns"] = "10mm 1fr 11mm 8mm";
+					break;
+
+				case 5:
+					e.style["grid-template-columns"] = "10mm 10mm 1fr 11mm 8mm";
+					break;
+
+				case 6:
+					e.style["grid-template-columns"] = "10mm 10mm 11mm 1fr 11mm 8mm";
+					break;
+			}
+
+
+			for (token of content_tokenized)
+			{
+				var element;
+				if (token.includes("<") && token.includes(">"))
+				{
+					// console.log(token);
+					switch (token) {
+						case "<checkbox-circle>":
+							element = document.createElement("checkbox-circle");
+							// console.log("added");
+							break;
+					}
+				}
+				else
+				{
+					if (e.getAttribute("header"))
+						element = document.createElement("shaded-text");
+					else
+						element = document.createElement("text-underscore");
+
+					element.innerHTML = token;
+				}
+				
+				// console.log(token);
+				e.appendChild(element);
+			}
+		}
+
+	</script>
+</body>
+
+</html>

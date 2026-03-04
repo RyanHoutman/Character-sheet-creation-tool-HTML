@@ -1,0 +1,158 @@
+.inventory_line {
+	width: 100%;
+	display: grid;
+	grid-column-gap: 1mm;
+    align-items: center;
+
+	position: relative;
+}
+
+
+
+.inventory_line/*
+*/:has(.place:nth-child(1))/*
+*/:has(.text_underscore_high:nth-child(2))/*
+*/:has(.checkbox_circle:nth-child(3)) 
+{
+	grid-template-columns: 10mm 1fr max-content;
+}
+
+
+
+.inventory_line/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(1))/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(2))/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(3))/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(4))/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(5))/*
+*/:has(:is(.text_underscore_low, .shaded_text):nth-child(6)) 
+{
+	grid-template-columns: 5mm 5mm 8mm 1fr 6mm 7mm;
+}
+
+
+
+
+.inventory_line .checkbox_circle {
+	width: 2.5mm;
+	height: 2.5mm;
+}
+
+
+
+
+
+
+
+
+.inventory_line :is(.text_underscore_high, .text_underscore_low) {
+	border-bottom: 0.4mm groove #cecece;
+	width: 100%;
+}
+
+.inventory_line .text_underscore_high {
+	height: 5mm;
+}
+
+.inventory_line .text_underscore_low {
+	height: 3mm;
+
+	font-family: helvetica;
+	font-size: 8px;
+
+}
+
+
+
+.inventory_line .place {
+	font-family: helvetica;
+	font-size: 10px;
+	font-weight: bold;
+
+	text-align: center;
+}
+
+inventory-line shaded-text {
+	font-size: 7px;
+}
+
+inventory-line/*
+*/:has(:is(text-underscore, shaded-text):nth-child(1))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(2))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(3))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(4))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(5))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(6)) 
+{
+	grid-template-columns: 7mm 7mm 11mm 1fr 10mm 8mm;
+}
+
+inventory-line/*
+*/:has(:is(text-underscore, shaded-text):nth-child(1))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(2))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(3))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(4))/*
+*/:has(:is(text-underscore, shaded-text):nth-child(5)) 
+{
+	grid-template-columns: 10mm 10mm 1fr 10mm 8mm;
+}
+
+inventory-line {
+	width: 100%;
+	display: grid;
+	grid-column-gap: 1mm;
+    align-items: center;
+
+	position: relative;
+}
+
+
+inventory-line text-underscore {
+	height: 3.5mm;
+
+
+	border-bottom: 0.4mm groove #cecece;
+	width: 100%;
+
+	font-family: helvetica;
+	font-size: 10px;
+
+}
+
+
+inventory-line checkbox-circle {
+	width: 2.5mm;
+	height: 2.5mm;
+}
+
+
+
+inventory-section {
+	width: 100%;
+	display: grid;
+	grid-column-gap: 1mm;
+    align-items: center;
+    justify-items: center;
+}
+
+
+inventory-section text-underscore {
+	height: 3.5mm;
+
+
+	border-bottom: 0.4mm groove #cecece;
+	width: 100%;
+
+	font-family: helvetica;
+	font-size: 10px;
+
+}
+
+inventory-section shaded-text {
+	font-size: 8px;
+}
+
+inventory-section checkbox-circle {
+	width: 2.5mm;
+	height: 2.5mm;
+}

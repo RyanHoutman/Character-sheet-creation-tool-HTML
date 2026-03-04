@@ -1,0 +1,51 @@
+.spellslot_column {
+	display: grid;
+	grid-row-gap: 1mm;
+}
+
+.spellslot_column .header {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.spellslot_column img {
+	width: 4mm;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+rage-column {
+	display: grid;
+	grid-row-gap: 0.5mm;
+	grid-column-gap: 1mm;
+}
+
+rage-column level-header {
+
+}
+
+rage-column img {
+	width: 2.5mm;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+weapon-mastery-column {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content 1fr;
+	grid-column-gap: 1mm;
+	grid-row-gap: 1mm;
+}
+
+
+weapon-mastery-column text_notchedbox {
+	--notchSize: 1mm;
+	width: auto;
+	height: 5mm;
+}

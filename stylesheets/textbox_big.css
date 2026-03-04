@@ -1,0 +1,101 @@
+.textbox_big {
+	width: stretch;
+	height: max-content;
+	border-image-source: url(../elements/textbox_big.png);
+	border-image-repeat: stretch;
+	border-image-slice: 65 81 152 fill; 
+	border-image-width: 3.5mm 4mm 7mm;
+
+	padding: 2mm 2mm 2mm 2mm;
+
+	position: relative;
+
+	display: grid;
+	align-items: start;
+	align-content: start;
+	grid-column-gap: 1mm;
+	grid-row-gap: 0.5mm;
+}
+
+.textbox_big:has(.boxLabelInside) {
+	padding-top: 5mm;
+}
+
+.textbox_big .boxLabelInside {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.textbox_big .boxLabelInside hr {
+	width: 60%;
+	margin: 0 20%;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}
+
+
+.textbox_big:has(inventory-line) {
+	grid-row-gap: 0.4mm;
+}
+
+
+
+
+
+
+
+
+textbox-big {
+	width: stretch;
+	height: max-content;
+	border-image-source: url(../elements/textbox_big.png);
+	border-image-repeat: stretch;
+	border-image-slice: 65 81 152 fill; 
+	border-image-width: 3.5mm 4mm 7mm;
+
+	padding: 2mm 2mm 2mm 2mm;
+
+	position: relative;
+
+	display: grid;
+	align-items: start;
+	align-content: start;
+	grid-column-gap: 1mm;
+	grid-row-gap: 0.5mm;
+}
+
+textbox-big:has(boxlabel-inside) {
+	padding-top: 5.5mm;
+}
+
+textbox-big boxlabel-inside {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+textbox-big boxlabel-inside hr {
+	width: 60%;
+	margin: 0 20%;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}
+
+
+textbox-big:has(inventory-line) {
+	grid-row-gap: 0.4mm;
+}
+

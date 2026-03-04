@@ -1,0 +1,29 @@
+.spell_line {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 5mm max-content 1fr;
+	position: relative;
+}
+
+.spell_line .text_notchedbox {
+	--notchSize: 0.6mm;
+	width: 5mm;
+	height: 3mm;
+}
+
+.spell_line img {
+	width: 2.5mm;
+	margin: 0 1mm;
+}
+
+.spell_line .checkbox_circle {
+	width: 2.5mm;
+	height: 2.5mm;
+	margin: 0 1mm;
+}
+
+.spell_line .text_underscore {
+	border-bottom: 0.4mm groove #cecece;
+	width: 100%;
+	height: 100%;
+}
