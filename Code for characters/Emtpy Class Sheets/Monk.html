@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>James</title>
+  <title>Monk</title>
   <link rel="stylesheet" href="./A4.css">
 
   <script src="scripts/styles.js"></script> 
-  <script src="scripts/inventory_line.js"></script> 
 </head>
 
 <body style="--bleeding: 0cm;--margin: 0cm;">
@@ -37,7 +36,7 @@
 			width: 20.2cm; 
 			height: 28.9cm;
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: max-content 1fr 1fr;
 			grid-template-rows: 23mm repeat(5, max-content);
 			grid-auto-flow: column;
 		">
@@ -179,35 +178,47 @@
 					<div class=boxLabelInside>Race and Background</div>
 
 					<div class=textbox_stacked_top>
-						<div class=boxLabelInside>Languages<hr></div>
-						<div class=text><center>Common, Dwarvish, Elvish</center></div>
-					</div>
+						<div class=boxLabelInside>Tools and Languages<hr></div>
+						<div class=text>
 
-					<div class=textbox_stacked_middle>
-						<div class=boxLabelInside>Tools<hr></div>
-						<div class=text><center>Cards</center></div>
+
+
+						</div>
 					</div>
 
 					<div class=textbox_stacked_middle>
 						<div class=boxLabelInside>Weapons and Armour<hr></div>
-						<div class=text><center>All weapons, Light/Medium armour, Shields.</center></div>
+						<div class=text><center>Simple weapons and Martial weapons that have the Light property</center>
+						</div>
 					</div>
 
 					<div class=textbox_stacked_middle>
 						<div class=boxLabelInside>Racial Features<hr></div>
-						<div class=text><b>Darkvision (120ft)</b>
-							<b>Dwarven Resilience</b> You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.
+						<div class=text>
+							
+							
 
-							<b>Dwarven Toughness</b> Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.
 
-							<b>Stonecunning</b> As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.
-							You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+
+
+
+
+
+
+
+
 						</div>
 					</div>
 
 					<div class=textbox_stacked_bottom>
-						<div class=boxLabelInside>Alert<hr></div>
-						<div class=text>Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.
+						<div class=boxLabelInside>Starter feat<hr></div>
+						<div class=text>
+							
+
+
+
+
+
 						</div>
 					</div>
 				</div>
@@ -218,6 +229,8 @@
 			<grid-container style="
 				grid-row: 2;
 				grid-column: 2;
+
+				grid-row-gap: 1mm;
 			">
 
 				<!-- SPELLSLOTS ->
@@ -331,23 +344,20 @@
 					</div>
 
 					<div class=simplebox>
-						<div class="boxLabelInside"><b>Rage</b></div>
+						<div class="boxLabelInside"><b>Focus Point</b></div>
 						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
 					</div>
 
 					<div class=simplebox>
-						<div class="boxLabelInside"><b></b></div>
-						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+						<div class="boxLabelInside"><b>Monk DC</b></div>
 					</div>
 
 					<div class=simplebox>
-						<div class="boxLabelInside"><b>Rage Damage</b></div>
-						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+						<div class="boxLabelInside"><b>Martial Die</b></div>
 					</div>
 
 					<div class=simplebox>
-						<div class="boxLabelInside"><b></b></div>
-						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
+						<div class="boxLabelInside"><b>Uncanny Metabolism</b></div>
 					</div>
 
 					<div class=shieldbox>
@@ -364,7 +374,6 @@
 
 					<div class=simplebox>
 						<div class="boxLabelInside"><b></b></div>
-						<!-- <div class=simplebox><div class=boxLabelOutside>Max uses</div></div> -->
 					</div>
 				</div>
 
@@ -401,51 +410,8 @@
 							<div class=text_notchedbox></div>
 							<div class=text_notchedbox></div>
 						</div>
-						<div class=weapon_line>
-							<div class=text_notchedbox></div>
-							<div class=text_notchedbox></div>
-							<div class=text_notchedbox></div>
-						</div>
 					</div>
 				</div><!---->
-
-				<div class=shadowbox 
-				style="
-					grid-row-gap: 0.5mm;
-				">
-
-					<div class=boxLabelInside>Weapon Mastery</div>
-
-					<div class=textbox_stacked_top>
-						<div class=boxLabelInside>Cleave<hr></div>
-						<div class=text>If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.
-						</div>
-					</div>
-
-					<div class=textbox_stacked_middle>
-						<div class=boxLabelInside>Vex<hr></div>
-						<div class=text>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.
-						</div>
-					</div>
-
-					<div class=textbox_stacked_middle>
-						<div class=boxLabelInside>Nick<hr></div>
-						<div class=text>When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.
-						</div>
-					</div>
-
-					<div class=textbox_stacked_middle>
-						<div class=boxLabelInside>Sap<hr></div>
-						<div class=text>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.
-						</div>
-					</div>
-
-					<div class=textbox_stacked_bottom>
-						<div class=boxLabelInside>Slow<hr></div>
-						<div class=text>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.
-						</div>
-					</div>
-				</div>
 
 				<!-- SPELLS ->
 				<div class=textbox_big id=spellbox1
@@ -475,21 +441,54 @@
 					grid-row-gap: 0.5mm;
 				">
 
-					<div class=boxLabelInside>Personal Information</div>
+					<div class=boxLabelInside>Class Features</div>
 
-					<div class=textbox_stacked_lone>
-					<div class=boxLabelInside>Background<hr></div>
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Martial Arts<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>1</div>
+						<div class=text>Monk Weapons are: Simple Melee Weapons and Light Martial Melee Weapons
+						You gain the following benefits while you are unarmed or wielding only Monk weapons and you aren't wearing armor or wielding a Shield.
+						<b>Bonus Unarmed Strike.</b> You can make an Unarmed Strike as a Bonus Action.
+						<b>Martial Arts Die.</b> You can roll a <i>Martial Die</i> in place of the normal damage of your Unarmed Strike or Monk weapons. The value of the die changes as you gain levels.
+						<b>Dexterous Attacks.</b> You can use your Dexterity modifier for the attack and damage rolls of your Unarmed Strikes and Monk weapons. In addition, when you use the Grapple or Shove option of your Unarmed Strike, you can use your Dexterity modifier instead of your Strength modifier to determine the save DC.
+						</div>
+					</div>
 
-						<div class=text>Ik werkte als guard op de Muur rondom Elturel. Ik ben ontslagen doordat een dare tussen mij en (tc) uit de hand liep. (Hoe precies idk, mis nog ff met Thomas kijken)
-					Heb op de muur veel gezien, voornamelijk de undead lieten een indruk achter. 
-					Vind de spanningen in de stad niet chill. Wil niet dat de stad weer terug gaat naar de tijd van 1444. 
-					Ik ben nu 70 jaar oud. Ik was 10 toen de undead de stad infested. Familie is toen dood gegaan. Ben er nog steeds niet overheen. 
-					Wil nu tegen de cult vechten om te zorgen dat de stad niet weer word overgenomen door dead and decay.
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Unarmored Defense<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>1</div>
+						<div class=text>While you aren't wearing armor or wielding a Shield, your AC equals 10 plus your Dexterity and Wisdom modifiers.
+						</div>
+					</div>
 
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Monk's Focus<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>2</div>
+						<div class=text>You can expend <i>Focus Points</i> to enhance or fuel certain Monk features. The number of points change as you gain levels and you regain used ones at the end of a Short or Long Rest. Some abilities that use Focus Points force a saving throw, the DC in that case is 8 + Wisdom Modifier + Proficiency Bonus. You start knowing three such features:
+						<b>Flurry of Blows.</b> You can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.
+						<b>Patient Defense.</b> You can take the Disengage action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and the Dodge actions as a Bonus Action.
+						<b>Step of the Wind.</b> You can take the Dash action as a Bonus Action. Alternatively, you can expend 1 Focus Point to take both the Disengage and Dash actions as a Bonus Action, and your jump distance is doubled for the turn.
+						</div>
+					</div>
 
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Unarmored Movement<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>2</div>
+						<div class=text>Your speed increases by 10 feet while you aren't wearing armor or wielding a Shield. This bonus increases when you reach certain Monk levels, as shown on the Monk Features table.
+						</div>
+					</div>
 
-
-					</div></div>
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Uncanny Metabolism<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>2</div>
+						<div class=text>When you roll Initiative, you can regain all expended Focus Points. When you do so, roll your Martial Arts die, and regain a number of Hit Points equal to your Monk level plus the number rolled. Once you use this feature, you can't use it again until you finish a Long Rest.
+						</div>
+					</div>
 				</div>
 			</grid-container>
 
@@ -504,54 +503,16 @@
 
 				<div class=boxLabelInside>Class Features</div>
 
+				
+
+				
+
 				<div class=textbox_stacked_top>
-					<div class=boxLabelInside>Rage<hr></div>
+					<div class=boxLabelInside>Deflect Attacks<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>1</div>
-					<div class=text>You can enter a rage as a Bonus Action if you aren't wearing Heavy armor. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. While active, your Rage follows the rules below.
-
-					- You have Resistance to Bludgeoning, Piercing, and Slashing damage.
-					- When you make an attack using Strength and deal damage to the target, you deal extra damage equal to your Rage Damage.
-					- You have Advantage on Strength checks and Strength saving throws.
-					- You can't maintain Concentration, and you can't cast spells.
-					
-					<b>Duration</b> The Rage lasts until the end of your next turn, and it ends early if you don Heavy armor or have the Incapacitated condition. If your Rage is still active on your next turn, you can extend the Rage for another round by doing one of the following:
-					- Make an attack roll against an enemy.
-					- Force an enemy to make a saving throw.
-					- Take a Bonus Action to extend your Rage.
-					You can maintain a Rage for up to 10 minutes.
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Unarmored Defense<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>1</div>
-					<div class=text>While you aren't wearing any armor, your base Armor Class equals 10 plus your Dexterity and Constitution modifiers. You can use a Shield and still gain this benefit.
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Weapon Mastery<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>1</div>
-					<div class=text>Your training with weapons allows you to use the mastery properties of two kinds of Simple or Martial Melee weapons of your choice. Whenever you finish a Long Rest, you can practice weapon drills and change one of those weapon choices. The number of masteries increases to 3 at level 4 and 4 at level 10.
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Danger Sense<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>2</div>
-					<div class=text>You have Advantage on Dexterity saving throws unless you have the Incapacitated condition.
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Reckless Attack<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>2</div>
-					<div class=text>When you make your first attack roll on your turn, you can decide to attack recklessly. Doing so gives you Advantage on attack rolls using Strength until the start of your next turn, but attack rolls against you have Advantage during that time.
+					<div class=leveltag_text>3</div>
+					<div class=text>When an attack roll hits you and its damage includes Bludgeoning, Piercing, or Slashing damage, you can take a Reaction to reduce the attack's total damage against you. The reduction equals 1d10 plus your Dexterity modifier and Monk level.
+					If you reduce the damage to 0, you can expend 1 Focus Point to redirect some of the attack's force. If you do so, choose a creature you can see within 5 feet of yourself if the attack was a melee attack or a creature you can see within 60 feet of yourself that isn't behind Total Cover if the attack was a ranged attack. That creature must succeed on a Dexterity saving throw or take damage equal to two rolls of your Martial Arts die plus your Dexterity modifier. The damage is the same type dealt by the attack.
 					</div>
 				</div>
 
@@ -569,17 +530,6 @@
 
 
 
-
-
-
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Primal Knowledge<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>3</div>
-					<div class=text>While your Rage is active, whenever you make an ability check using one of the following skills, you can make it as a Strength check even if it normally uses a different ability: Acrobatics, Intimidation, Perception, Stealth, or Survival.
 					</div>
 				</div>
 
@@ -588,9 +538,6 @@
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>4</div>
 					<div class=text>
-
-
-
 
 
 
@@ -608,14 +555,22 @@
 				</div>
 
 				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Fast Movement<hr></div>
+					<div class=boxLabelInside>Stunning Strike<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>5</div>
-					<div class=text>Your speed increases by 10 feet while you aren't wearing Heavy armor.
+					<div class=text>Once per turn when you hit a creature with a Monk weapon or an Unarmed Strike, you can expend 1 Focus Point to attempt a stunning strike. The target must make a Constitution saving throw. On a failed save, the target has the Stunned condition until the start of your next turn. On a successful save, the target's Speed is halved until the start of your next turn, and the next attack roll made against the target before then has Advantage.
 					</div>
 				</div>
 
-				<div class=textbox_stacked_bottom>
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Empowered Strikes<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>6</div>
+					<div class=text>Whenever you deal damage with your Unarmed Strike, it can deal your choice of Force damage or its normal damage type.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
 					<div class=boxLabelInside>‎<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>6</div>
@@ -627,7 +582,41 @@
 
 
 
+					</div>
+				</div>
 
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Evasion<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage and you are not Incapacitated, you instead take no damage if you succeed on the saving throw and only half damage if you fail.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Acrobatic Movement<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>9</div>
+					<div class=text>While you aren't wearing armor or wielding a Shield, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the movement.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Heightened Focus<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>10</div>
+					<div class=text>Your Flurry of Blows, Patient Defense, and Step of the Wind gain the following benefits.
+					<b>Flurry of Blows.</b> You can expend 1 Focus Point to use Flurry of Blows and make three Unarmed Strikes with it instead of two.
+					<b>Patient Defense.</b> When you expend a Focus Point to use Patient Defense, you gain a number of Temporary Hit Points equal to two rolls of your Martial Arts die.
+					<b>Step of the Wind.</b> When you expend a Focus Point to use Step of the Wind, you can choose a willing creature within 5 feet of yourself that is Large or smaller. You move the creature with you until the end of your turn. The creature's movement doesn't provoke Opportunity Attacks.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Self-Restoration<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>10</div>
+					<div class=text>Through sheer force of will, you can remove one of the following conditions from yourself at the end of each of your turns: Charmed, Frightened, or Poisoned. In addition, forgoing food and drink doesn't give you levels of Exhaustion.
 					</div>
 				</div>
 			</div>
@@ -640,6 +629,194 @@
 			<!-- end of the box of A4 -->
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		var all_inventory_sections = document.getElementsByTagName("inventory-section");
+
+		for (e of all_inventory_sections)
+		{
+			// console.log(e.getAttribute("content"));
+			const content_tokenized = e.hasAttribute("content") ? e.getAttribute("content").split("\n") : [];
+
+
+			const content_exclude_tokenized = e.hasAttribute("content_exclude") ? e.getAttribute("content_exclude").split("\n") : [];
+
+			const header_tokenized = e.hasAttribute("header") ? e.getAttribute("header").split("_") : [];
+			const parser_tokenized = e.hasAttribute("parser") ? e.getAttribute("parser").split("_") : [];
+
+			const emptyrows = e.hasAttribute("emptyrows") ? e.getAttribute("emptyrows") : 0;
+			const rowheight = e.hasAttribute("height") ? e.getAttribute("height") : "low";
+
+			// create the header
+			for (h of header_tokenized)
+			{
+				item = document.createElement("shaded-text");
+				item.innerHTML = h;
+				e.appendChild(item);
+			}
+
+			// set the column width and count
+			style_string = "";
+			for (h of header_tokenized)
+			{
+				switch (h)
+				{
+					case "ITEM": style_string += "1fr "; break;
+					case "PLACE": style_string += "minmax(15mm, max-content) "; break;
+					default: style_string += "minmax(7mm, max-content) "; break;
+				}					
+			}
+			e.style["grid-template-columns"] = style_string;
+
+
+			// set the row spacing according to height
+			switch (rowheight)
+			{
+				case "low":
+					e.style["grid-row-gap"] = "0.5mm";
+					break;
+				case "high":
+					e.style["grid-row-gap"] = "2mm";
+					break;
+			}
+			
+
+
+			// set the content
+			// ignore the first enter
+			for (var i=1; i < content_tokenized.length; i += parser_tokenized.length)
+			{
+				if (content_exclude_tokenized.includes(content_tokenized[i+parser_tokenized.indexOf("ITEM")]))
+					continue;
+
+
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+
+					if (parser_tokenized.includes(h))
+						item.innerHTML = content_tokenized[i+parser_tokenized.indexOf(h)];
+
+					e.appendChild(item);
+				}
+			}
+
+
+			for (var i=0; i < emptyrows; i++)
+			{
+				for (h of header_tokenized)
+				{
+					var item;
+					switch (h)
+					{
+						case "ATTUNED":
+							item = document.createElement("checkbox-circle");
+							break;
+
+						default:
+							item = document.createElement("text-underscore");
+							break;
+					}
+					e.appendChild(item);
+				}
+			}
+		}
+
+
+
+
+
+		// get all inventory-line elements
+		var all_inventory_line_elements = document.getElementsByTagName("inventory-line");
+
+		for (e of all_inventory_line_elements)
+		{
+			// console.log(e.getAttribute("content"));
+
+			if (!e.hasAttribute("content"))
+				continue;
+
+			const content_tokenized = e.getAttribute("content").split("_");
+
+			// set the correct spacings for the type of inventory line
+			switch(content_tokenized.length)
+			{
+				case 3:
+					e.style["grid-template-columns"] = "10mm 1fr max-content";
+					break;
+
+				case 4:
+					e.style["grid-template-columns"] = "10mm 1fr 11mm 8mm";
+					break;
+
+				case 5:
+					e.style["grid-template-columns"] = "10mm 10mm 1fr 11mm 8mm";
+					break;
+
+				case 6:
+					e.style["grid-template-columns"] = "10mm 10mm 11mm 1fr 11mm 8mm";
+					break;
+			}
+
+
+			for (token of content_tokenized)
+			{
+				var element;
+				if (token.includes("<") && token.includes(">"))
+				{
+					// console.log(token);
+					switch (token) {
+						case "<checkbox-circle>":
+							element = document.createElement("checkbox-circle");
+							// console.log("added");
+							break;
+					}
+				}
+				else
+				{
+					if (e.getAttribute("header"))
+						element = document.createElement("shaded-text");
+					else
+						element = document.createElement("text-underscore");
+
+					element.innerHTML = token;
+				}
+				
+				// console.log(token);
+				e.appendChild(element);
+			}
+		}
+
+	</script>
 </body>
 
 </html>

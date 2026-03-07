@@ -1,7 +1,7 @@
 .shadowbox { 
 	width: stretch;
 	height: max-content;
-	margin: 1mm;
+	margin: 0mm 1mm;
 	border-image-source: url(../elements/shadowbox.png);
 	border-image-repeat: stretch;
 	border-image-slice: 180 100 fill; 

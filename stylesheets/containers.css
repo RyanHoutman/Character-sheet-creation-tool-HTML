@@ -4,7 +4,7 @@ grid-container {
 
 	display: grid;
     justify-items: center;
-    /*grid-row-gap: 1mm;*/
+    grid-row-gap: 1mm;
     /*grid-column-gap: 1mm;*/
 }
 
