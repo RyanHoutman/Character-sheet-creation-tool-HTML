@@ -10,6 +10,7 @@
 	align-content: start;
 	grid-column-gap: 1mm;
 	grid-row-gap: 0.5mm;
+	margin: 0mm 1mm;
 }
 
 .textbox_stacked_top {

@@ -12,4 +12,5 @@ column-container {
 	width: stretch;
 	display: grid;
 	grid-row-gap: 1mm;
+	margin: 0mm 1mm;
 }
