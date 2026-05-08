@@ -70,3 +70,53 @@ textbox-paper boxlabel-inside hr {
 	background: black;
 	border: none;
 }
+
+
+
+/* Rules for magic items which use the textbox-paper block */
+textbox-paper magicitem-title {
+	margin: 1mm 2mm;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	
+	font-weight: bold;
+	font-size: 16px;
+}
+
+textbox-paper magicitem-abstract {
+	margin: 1.2mm 2mm;
+	position: absolute;
+	top: 5mm;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	font-style: italic;
+	font-family: helvetica;
+	font-size: 9px;
+}
+
+textbox-paper:has(magicitem-abstract) {
+	padding-top: 10mm;
+}
+
+textbox-paper hr {
+	width: 80%;
+	margin: 0 10%;
+
+	height: 0.5mm;
+	clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+	background: black;
+	border: none;
+}
+
+textbox-paper magicitem-description {
+	/* font-family: helvetica; */
+	font-size: 11px;
+	line-height: 80%;
+	
+	white-space: pre-line;
+}
