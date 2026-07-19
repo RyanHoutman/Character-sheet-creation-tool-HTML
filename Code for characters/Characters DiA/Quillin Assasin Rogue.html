@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character name</title>
+  <link rel="stylesheet" href="A4.css">
+
+  <script src="scripts/styles.js"></script> 
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 20.2cm; 
+			height: 28.9cm;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 23mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of A4 -->
+
+			<!-- NAMEBOX -->
+			<grid-container style="
+				grid-row: 1;
+				grid-column: 1/3;
+				grid-template-columns: max-content max-content;
+			">
+				<div class=namebanner style="grid-column: 1; grid-row: 1; margin: 0 0.4cm">
+					<div class=name></div>
+					<div class=level></div>
+					<div class=box style="
+							grid-template-columns: repeat(3, 1fr);
+							grid-template-rows: repeat(2, 1fr);
+						">
+							<div class=text_lines>Race</div>
+							<div class=text_lines>Height</div>
+							<div class=text_lines>Weight</div>
+							<div class=text_lines>Class</div>
+							<div class=text_lines>Subclass</div>
+							<div class=text_lines>Alignment</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 1 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 1;
+			">
+
+				<!-- INSPIRATION, PROF BONUS -->
+				<div style="
+					/*grid-column: 1; grid-row: 2;*/
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, max-content);
+					align-content: start;
+					grid-column-gap: 1mm;
+					grid-row-gap: 0.5mm;
+					">
+
+					<div class=skill_banner>
+						<div class=banner><p>Proficiency bonus</p></div>
+						<img class=tag1 src="elements/smallbox_1.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Inspiration</p></div>
+						<img class=tag2 src="elements/smallbox_2.png">
+					</div>
+				</div>
+
+				<!-- STATS AND SKILLS -->
+				<div class=shadowbox>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Strength</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Strength Saving Throw</dt>
+							<dt class="skillProf">Athlethics</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Dexterity</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+							<dt class="skillProf">Acrobatics</dt>
+							<dt class="skillProf">Sleight of Hand</dt>
+							<dt class="skillProf">Stealth</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Constitution</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Constitution Saving Throw</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Intelligence</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+							<dt class="skillProf">Arcana</dt>
+							<dt class="skillProf">History</dt>
+							<dt class="skillProf">Investigation</dt>
+							<dt class="skillProf">Nature</dt>
+							<dt class="skillProf">Religion</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Wisdom</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+							<dt class="skillProf">Animal Handling</dt>
+							<dt class="skillProf">Insight</dt>
+							<dt class="skillProf">Medicine</dt>
+							<dt class="skillProf">Perception</dt>
+							<dt class="skillProf">Survival</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Charisma</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Charisma Saving Throw</dt>
+							<dt class="skillProf">Deception</dt>
+							<dt class="skillProf">Intimidation</dt>
+							<dt class="skillProf">Performance</dt>
+							<dt class="skillProf">Persuasion</dt>
+						</dl>
+					</div>
+				</div>
+
+				<!-- RACE AND BACKGROUND -->
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Race and Background</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Languages<hr></div>
+						<div class=text><center>Chosen Languages, Thieves can't</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Tools<hr></div>
+						<div class=text><center>Chosen Tools, Thieves' Tools, Disguise kit, Poisoner's kit</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Weapons and Armour<hr></div>
+						<div class=text><center>Simple weapons, Finesse/Light Martial weapons, Light armor</center></div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Racial Features<hr></div>
+						<div class=text><b>Darkvision (60ft)</b>
+						<b>Fey Ancestry</b> You have advantage on charmed saving throws.
+						<b>Fey Step (PB/LR)</b> As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see.
+						<i>Autumn.</i> Immediately after you use your Fey Step, up to two creatures of your choice that you can see within 10 feet of you must succeed on a Wisdom saving throw or be charmed by you for 1 minute, or until you or your allies deal damage to them.
+						<i>Winter.</i> One creature of your choice that you can see within 5 feet of you before you teleport must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn.
+						<i>Spring.</i> You can touch one willing creature within 5 feet of you. That creature then teleports instead of you.
+						<i>Summer.</i> Immediately after you use your Fey Step, each creature of your choice that you can see within 5 feet of you takes fire damage equal to your proficiency bonus.
+						<b>Trance</b> You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.
+						Whenever you finish this trance, you can change your season, and you can gain two weapon/tool proficiencies and you retain them until you finish your next long rest.
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 2 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 2;
+
+				grid-row-gap: 1mm;
+			">
+				<!-- AC HITPOINTS INITIATIVE SPEED -->
+				<div class=shadowbox 
+					style="
+						grid-template-columns: repeat(3, max-content);
+						grid-template-rows: repeat(3, 1fr);
+						grid-auto-flow: row;
+					">
+
+					<div class="textbox_paper hpbox" style="grid-column: 1/3; grid-row: 1/3;">
+						<div class=simplebox>
+							<div class="boxLabelOutside">Maximum hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Current hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Temporary hitpoints</div>
+						</div>
+
+						<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+							<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+						</div>
+					</div>
+
+					<div class=shieldbox>
+						<div class="boxLabelInside"><b>AC</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Initiative</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Sneak attack</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Cunning strike DC</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Speed</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Fey Step</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b></b></div>
+					</div>
+				</div>
+
+				<!-- ATTACKS -->
+				<div class=textbox_big>
+					<div class=boxLabelInside><b>Attacks</b><hr></div>
+					<div style="
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-row-gap: 0.5mm;
+						">
+						<div class=weapon_line_headers>
+							<div class=shaded_text>Weapon name</div>
+							<div class=shaded_text>Atk bonus</div>
+							<div class=shaded_text>Damage/type</div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+					</div>
+				</div><!---->
+
+
+				<div class=shadowbox 
+					style="
+						grid-row-gap: 0.5mm;
+					">
+
+					<div class=boxLabelInside>Sneak Attack</div>
+
+					
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Sneak Attack<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>1</div>
+						<div class=text>You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.
+
+						You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.
+
+						The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.
+						</div>
+					</div>
+					
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Cunning Strike<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>5</div>
+						<div class=text>When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. 
+						If a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.
+						<b>Poison (Cost: 1d6)</b> You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.
+						To use this effect, you must have a Poisoner's Kit on your person.
+						<b>Trip (Cost: 1d6)</b> If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.
+						<b>Withdraw (Cost: 1d6)</b> Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Improved Cunning Strike<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>11</div>
+						<div class=text>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Devious Strikes<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>14</div>
+						<div class=text>The following effects are now among your Cunning Strike options.
+						<b>Daze (Cost: 2d6)</b> The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action.
+						<b>Knock Out (Cost: 6d6)</b> The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success.
+						<b>Obscure (Cost: 3d6)</b> The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 3 -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 3;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				
+
+				
+
+				<div class=textbox_stacked_top>
+					<div class=boxLabelInside>Weapon Mastery<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows.
+
+					Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Shortswords.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Cunning Action<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Assassinate<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>You're adept at ambushing a target, granting you the following benefits.
+
+					<b>Initiative</b> You have Advantage on Initiative rolls.
+
+					<b>Surprising Strikes</b> During the first round of each combat, you have Advantage on attack rolls against any creature that hasn't taken a turn. If your Sneak Attack hits any target during that round, the target takes extra damage of the weapon's type equal to your Rogue level.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Steady Aim<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Mage Slayer<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>4</div>
+					<div class=text><b>Concentration Breaker</b> When you damage a creature that is Concentrating, it has Disadvantage on the saving throw it makes to maintain Concentration.
+					<b>Guarded Mind</b> If you fail an Intelligence, a Wisdom, or a Charisma saving throw, you can cause yourself to succeed instead. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
+					</div>
+				</div>
+
+				
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Uncanny Dodge<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack's damage against you (round down).
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Evasion<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>You can nimbly dodge out of the way of certain dangers. When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. You can't use this feature if you have the Incapacitated condition.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Reliable Talent<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Sharpshooter<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>8</div>
+					<div class=text><b>Bypass Cover</b> Your ranged attacks with weapons ignore Half Cover and Three-Quarters Cover.
+					<b>Firing in Melee</b> Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with Ranged weapons.
+					<b>Long Shots</b> Attacking at long range doesn't impose Disadvantage on your attack rolls with Ranged weapons.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Infiltration Expertise<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>9</div>
+					<div class=text>You are expert at the following techniques that aid your infiltrations.
+
+					<b>Masterful Mimicry</b> You can unerringly mimic another person's speech, handwriting, or both if you have spent at least 1 hour studying them.
+
+					<b>Roving Aim</b> Your Speed isn't reduced to 0 by using Steady Aim.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Skulker<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>10</div>
+					<div class=text><b>Blindsight</b> You have Blindsight with a range of 10 feet.
+<b>Fog of War</b> You exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check you make as part of the Hide action during combat.
+<b>Sniper</b> If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Envenom Weapons<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>13</div>
+					<div class=text>When you use the Poison option of your Cunning Strike, the target also takes 2d6 Poison damage whenever it fails the saving throw. This damage ignores Resistance to Poison damage.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Slippery Mind<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>15</div>
+					<div class=text>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.
+					</div>
+				</div>
+			</div>
+
+
+			
+
+
+			
+			<!-- end of the box of A4 -->
+		</div>
+	</div>
+
+
+
+	<script src="scripts/inventory_sections.js"></script> 
+</body>
+
+</html>
