@@ -28,5 +28,6 @@ document.getElementsByTagName("head")[0].innerHTML += `
 <link rel="stylesheet" href="stylesheets/inventory_line.css"/>
 <link rel="stylesheet" href="stylesheets/ability_trackers.css"/>
 <link rel="stylesheet" href="stylesheets/profiency_checkbox.css"/>
+<link rel="stylesheet" href="stylesheets/companion.css"/>
 `;
 

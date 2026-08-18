@@ -1,0 +1,31 @@
+companion-stat-box {
+	--size: 0.52;
+	--borderScale: 0.9;
+	width: calc(18.5mm * var(--size));
+	height: calc(17mm * var(--size));
+	border-image-source: url(../elements/box_1.png);
+	border-image-repeat: stretch;
+	border-image-slice: 95 82 fill; 
+	border-image-width: calc(3mm * var(--borderScale));
+
+	position: relative;
+}
+
+companion-stat-box img {
+	width: 1.8cm;
+}
+
+companion-stat-box boxlabel-outside {
+	font-size: 8px;
+	color: var(--darkgray);
+}
+
+companion-stat-box boxlabel-inside {
+	margin: 0 calc(1.5mm * var(--borderScale));
+	position: absolute;
+	top: 1mm;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-weight: bold;
+}
