@@ -10,3 +10,18 @@
 	width: auto;
 	height: 5mm;
 }
+
+
+
+
+weapon-mastery-line text-notchedbox {
+	--notchSize: 1mm;
+	width: auto;
+	height: 5mm;
+}
+
+weapon-mastery-line, weapon-mastery-header {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-column-gap: 1mm;
+}

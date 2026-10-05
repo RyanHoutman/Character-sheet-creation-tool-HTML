@@ -10,7 +10,7 @@
 	background-color: #cecece;
 }
 
-text_notchedbox {
+text-notchedbox {
 	--notchSize: 0.7mm;
 	clip-path: polygon(
 	    0% 								var(--notchSize), 
