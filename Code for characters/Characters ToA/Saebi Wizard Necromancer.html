@@ -395,7 +395,7 @@
 					</div>
 				</div><!---->
 
-				<!-- SPELLS -->
+				<!-- SPELLS ->
 				<div class=textbox_big id=spellbox1
 					style="
 						/*grid-column: 2/4;*/
@@ -416,7 +416,7 @@
 						  document.getElementById('spellbox1').appendChild(document.getElementById('spell_line_template').content.cloneNode(true)); 
 						}
 					</script>
-				</div>
+				</div><!---->
 
 				<div class=shadowbox 
 				style="
@@ -426,21 +426,99 @@
 					<div class=boxLabelInside>Feats</div>
 
 					<div class=textbox_stacked_top>
-						<div class=boxLabelInside>Spell Sniper<hr></div>
+						<div class=boxLabelInside>Arcane Undertaker<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>4</div>
+						<div class=text><b>Knowledge from the Dead.</b> When you make an Intelligence (History) or Wisdom (Medicine) check, you can roll 1d4 and add the number rolled to the ability check.
+						<b>Understanding of Death.</b> When you take the Help action to stabilize a creature with 0 Hit Points, you gain Heroic Inspiration. Once you use this benefit, you can't use it again until you finish a Long Rest.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Necromancy Adept<hr></div>
 						<img class=leveltag src="elements/smallbox_4.png">
 						<div class=leveltag_text>8</div>
+						<div class=text>When you cast a spell from the Necromancy school using a spell slot, you can immediately roll up to two of your unexpended Hit Point Dice. You regain Hit Points equal to the total rolled plus the level of spell slot expended. Those Hit Point Dice are then expended.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Spell Sniper<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>12</div>
 						<div class=text><b>Bypass Cover.</b> Your attack rolls for spells ignore Half Cover and Three-Quarters Cover.
 						<b>Casting in Melee.</b> Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with spells.
 						<b>Increased Range.</b> When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.
 						</div>
 					</div>
+				</div>
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Zombie Butler</div>
+
+					<div class=textbox_stacked_lone></div>
+					<grid-container style="
+						grid-template-columns: repeat(6, 1fr);
+						grid-template-rows: 1fr;
+						">
+						<companion-stat-box>
+							<boxlabel-inside>Str</boxlabel-inside>
+						</companion-stat-box>
+						<companion-stat-box>
+							<boxlabel-inside>Dex</boxlabel-inside>
+						</companion-stat-box>
+						<companion-stat-box>
+							<boxlabel-inside>Con</boxlabel-inside>
+						</companion-stat-box>
+						<companion-stat-box>
+							<boxlabel-inside>Int</boxlabel-inside>
+						</companion-stat-box>
+						<companion-stat-box>
+							<boxlabel-inside>Wis</boxlabel-inside>
+						</companion-stat-box>
+						<companion-stat-box>
+							<boxlabel-inside>Cha</boxlabel-inside>
+						</companion-stat-box>
+					</grid-container>
+
+					<grid-container style="
+						grid-template-columns: repeat(4, 1fr);
+						">
+						<div class=shieldbox style="width: 14mm; height: 14mm;">
+							<div class="boxLabelInside"><b>AC</b></div>
+						</div>
+
+						<textbox-paper style="height: 12mm">
+							<boxlabel-inside><b>HP</b></boxlabel-inside>
+						</textbox-paper>	
+
+						<textbox-paper style="height: 12mm">
+							<boxlabel-inside><b>Speed</b></boxlabel-inside>
+						</textbox-paper>	
+
+						<div class=shieldbox style="width: 14mm; height: 14mm;">
+							<div class="boxLabelInside"><b>ST</b></div>
+						</div>
+
+					</grid-container>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Features<hr></div>
+						<div class=text><b>Immunities</b> Poison; Exhaustion, Poisoned
+							<b>Senses</b> Darkvision 60 ft., Passive Perception 8
+							<b>Languages</b> Understands Common plus one other language, but can't speak
+							
+							<b>Undead Fortitude.</b> If damage reduces the zombie to 0 Hit Points, it makes a Constitution saving throw (DC 5 plus the damage taken) unless the damage is Radiant or from a Critical Hit. On a successful save, the zombie drops to 1 Hit Point instead.
+						</div>
+					</div>
 
 					<div class=textbox_stacked_bottom>
-						<div class=boxLabelInside>Telepathic<hr></div>
-						<img class=leveltag src="elements/smallbox_4.png">
-						<div class=leveltag_text>12</div>
-						<div class=text><b>Telepathic Utterance.</b> You can speak telepathically to any creature you can see within 60 feet of yourself. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.
-						<b>Detect Thoughts.</b> You always have the Detect Thoughts spell prepared. You can cast it without a spell slot or spell components, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.
+						<div class=boxLabelInside>Attacks<hr></div>
+						<div class=text><b>Slam.</b> Melee Attack Roll: +3, reach 5 ft. Hit: 5 (1d8 + 1) Bludgeoning damage.
 						</div>
 					</div>
 				</div>
@@ -494,10 +572,14 @@
 				</div>
 
 				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Necromancy Savant<hr></div>
+					<div class=boxLabelInside>Necromancy Spellbook<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>3</div>
-					<div class=text>The gold and time you must spend to copy a necromancy spell into your spellbook is halved.
+					<div class=text><b>Undead Familiar.</b> The Find Familiar spell appears in your spellbook. When you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: Skeleton or Zombie (see appendix B of the Player's Handbook for the familiar's stat block). When you choose one of the normal forms, you can choose Undead as its creature type.
+
+					Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.
+
+					<b>Undead Vitality.</b> When you cast a Necromancy spell using a spell slot, you can choose an Undead creature you can see within 60 feet of yourself to regain a number of Hit Points equal to the level of the spell slot expended plus your Wizard level.
 					</div>
 				</div>
 
@@ -509,16 +591,6 @@
 				</div>
 
 				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>War Caster<hr></div>
-					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>4</div>
-					<div class=text><b>Concentration.</b> You have Advantage on Constitution saving throws that you make to maintain Concentration.
-					<b>Reactive Spell.</b> When a creature provokes an Opportunity Attack from you by leaving your reach, you can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.
-					<b>Somatic Components.</b> You can perform the Somatic components of spells even when you have weapons or a Shield in one or both hands.
-					</div>
-				</div>
-
-				<div class=textbox_stacked_middle>
 					<div class=boxLabelInside>Memorize Spell<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>5</div>
@@ -527,31 +599,32 @@
 				</div>
 
 				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Undead Thralls<hr></div>
+					<div class=boxLabelInside>Grave Power<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
 					<div class=leveltag_text>6</div>
-					<div class=text>You add the animate dead spell to your spellbook if it is not there already. When you cast animate dead, you can target one additional corpse or pile of bones, creating another zombie or skeleton, as appropriate. Whenever you create an undead using a necromancy spell, it has additional benefits:
-
-					The creature's hit point maximum is increased by an amount equal to your wizard level.
-					The creature adds your proficiency bonus to its weapon damage rolls.
+					<div class=text><b>Grave Resilience.</b> When you use Arcane Recovery, your Exhaustion level, if any, decreases by 1.
+					<b>Overwhelming Necrosis.</b> Damage from your Wizard spells and Wizard features ignores Resistance to Necrotic damage.
 					</div>
 				</div>
 
 				<div class=textbox_stacked_middle>
-					<div class=boxLabelInside>Inured to Undeath<hr></div>
+					<div class=boxLabelInside>Undead Thralls<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>10</div>
-					<div class=text>You have resistance to necrotic damage, and your hit point maximum can't be reduced. You have spent so much time dealing with undead and the forces that animate them that you have become inured to some of their worst effects.
+					<div class=leveltag_text>6</div>
+					<div class=text>You always have Animate Dead prepared and can cast it without expending a spell slot, but you must finish a Long Rest before you can cast it in this way again. Whenever you start casting the spell, you can increase the spell's effective level by 1.
+					In addition, while holding your spellbook, you gain the following benefits.
+
+					<b>Undead Fortitude.</b> Whenever you cast a Necromancy spell that creates or summons an Undead, the Undead's Hit Point maximum and current Hit Points increase by a number equal to your Intelligence modifier plus half your Wizard level (round down).
+
+					<b>Withering Strike.</b> Whenever an Undead you control within 60 feet of you hits a creature with an attack roll, the Undead deals extra Necrotic damage equal to your Intelligence modifier (minimum of 1 Necrotic damage).
 					</div>
 				</div>
 
 				<div class=textbox_stacked_bottom>
-					<div class=boxLabelInside>Command Undead<hr></div>
+					<div class=boxLabelInside>Harvest Undead<hr></div>
 					<img class=leveltag src="elements/smallbox_4.png">
-					<div class=leveltag_text>14</div>
-					<div class=text>You can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can't use this feature on it again. If it fails, it becomes friendly to you and obeys your commands until you use this feature again.
-
-					Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.
+					<div class=leveltag_text>10</div>
+					<div class=text>You have learned more secrets about the nuances of life and death. Immediately after you become Bloodied but aren't reduced to 0 Hit Points from taking damage, you can take a Reaction to reduce an Undead creature under your control that you can see to 0 Hit Points. You then immediately regain a number of Hit Points equal to your Wizard level.
 					</div>
 				</div>
 			</div>
