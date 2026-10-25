@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Character name</title>
+  <link rel="stylesheet" href="A4.css">
+
+  <script src="scripts/styles.js"></script> 
+</head>
+
+<body style="--bleeding: 0cm;--margin: 0cm;">
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 20.2cm; 
+			height: 28.9cm;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 23mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of A4 -->
+
+			<!-- NAMEBOX -->
+			<grid-container style="
+				grid-row: 1;
+				grid-column: 1/3;
+				grid-template-columns: max-content max-content;
+			">
+				<div class=namebanner style="grid-column: 1; grid-row: 1; margin: 0 0.4cm">
+					<div class=name></div>
+					<div class=level></div>
+					<div class=box style="
+							grid-template-columns: repeat(3, 1fr);
+							grid-template-rows: repeat(2, 1fr);
+						">
+							<div class=text_lines>Race</div>
+							<div class=text_lines>Height</div>
+							<div class=text_lines>Weight</div>
+							<div class=text_lines>Class</div>
+							<div class=text_lines>Subclass</div>
+							<div class=text_lines>Alignment</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 1 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 1;
+			">
+
+				<!-- INSPIRATION, PROF BONUS -->
+				<div style="
+					/*grid-column: 1; grid-row: 2;*/
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(2, max-content);
+					align-content: start;
+					grid-column-gap: 1mm;
+					grid-row-gap: 0.5mm;
+					">
+
+					<div class=skill_banner>
+						<div class=banner><p>Proficiency bonus</p></div>
+						<img class=tag1 src="elements/smallbox_1.png">
+					</div>
+
+					<div class=skill_banner>
+						<div class=banner><p>Inspiration</p></div>
+						<img class=tag2 src="elements/smallbox_2.png">
+					</div>
+				</div>
+
+				<!-- STATS AND SKILLS -->
+				<div class=shadowbox>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Strength</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Strength Saving Throw</dt>
+							<dt class="skillProf">Athlethics</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Dexterity</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Dexterity Saving Throw</dt>
+							<dt class="skillProf">Acrobatics</dt>
+							<dt class="skillProf">Sleight of Hand</dt>
+							<dt class="skillProf">Stealth</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Constitution</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Constitution Saving Throw</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Intelligence</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Intelligence Saving Throw</dt>
+							<dt class="skillProf">Arcana</dt>
+							<dt class="skillProf">History</dt>
+							<dt class="skillProf">Investigation</dt>
+							<dt class="skillProf">Nature</dt>
+							<dt class="skillProf">Religion</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Wisdom</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Wisdom Saving Throw</dt>
+							<dt class="skillProf">Animal Handling</dt>
+							<dt class="skillProf">Insight</dt>
+							<dt class="skillProf">Medicine</dt>
+							<dt class="skillProf">Perception</dt>
+							<dt class="skillProf">Survival</dt>
+						</dl>
+					</div>
+
+					<div class=statbox>
+						<div class="boxLabelInside"><b>Charisma</b></div>
+						<dl class="skills">
+							<dt class="savingThrowProf">Charisma Saving Throw</dt>
+							<dt class="skillProf">Deception</dt>
+							<dt class="skillProf">Intimidation</dt>
+							<dt class="skillProf">Performance</dt>
+							<dt class="skillProf">Persuasion</dt>
+						</dl>
+					</div>
+				</div>
+
+				<!-- RACE AND BACKGROUND -->
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Race and Background</div>
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Languages,Tools, Weapons, Armour<hr></div>
+						<div class=text><center>Common, Thieves' cant, Sylvan, Draconic, Elvish
+							Thieves' tools, Gaming set (playing cards) 
+							Simple weapons and Martial weapons with Finesse or Light property, Light armour
+						</center></div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Racial Features<hr></div>
+						<div class=text><center><b>Lucky Footwork.</b> When you fail a Dexterity saving throw, you can use your reaction to roll a d4 and add it to the save, potentially turning the failure into a success. You can't use this reaction if you're prone or your speed is 0.
+<b>Rabbit Hop.</b> As a bonus action, you can jump a number of feet equal to five times your proficiency bonus, without provoking opportunity attacks. You can use this trait only if your speed is greater than 0. You can use it a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</center></div>
+					</div>
+
+						<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Gathered Whispers<hr></div>
+						<div class=text><b>Spirit Whispers.</b> You learn the <i>Message</i> spell and can cast it without Material components. Additionally, you always have the <i>Augury</i> spell prepared. You can cast it without a spell slot or spell components once per Long Rest. You can also cast the spell using any spell slots you have.
+						<b>Unearthly Scream.</b> When you are hit by an attack roll, you can take a Reaction to add your Proficiency Bonus to your AC against that attack. You can use this benefit a number of times equal to your Proficiency Bonus per Long Rest.
+						<b>Voices from Beyond.</b> Immediately after you make a D20 Test and roll a 1, make a Wisdom saving throw (DC 13 plus your Proficiency Bonus) or be Deafened until the end of your next turn. While Deafened, you have Disadvantage on ability checks and attack rolls.
+						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 2 -->
+			<grid-container style="
+				grid-row: 2;
+				grid-column: 2;
+
+				grid-row-gap: 1mm;
+			">
+				<!-- AC HITPOINTS INITIATIVE SPEED -->
+				<div class=shadowbox 
+					style="
+						grid-template-columns: repeat(3, max-content);
+						grid-template-rows: repeat(3, 1fr);
+						grid-auto-flow: row;
+					">
+
+					<div class="textbox_paper hpbox" style="grid-column: 1/3; grid-row: 1/3;">
+						<div class=simplebox>
+							<div class="boxLabelOutside">Maximum hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Current hitpoints</div>
+						</div>
+
+						<div class=simplebox>
+							<div class="boxLabelOutside">Temporary hitpoints</div>
+						</div>
+
+						<div class=levelup_hp style="grid-column: 1/-1; grid-row: 2;">
+							<div class=boxLabelOutside style="grid-column: 1/-1">HP rolled at a level up</div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+							<div class=simplebox></div>
+						</div>
+					</div>
+
+					<div class=shieldbox>
+						<div class="boxLabelInside"><b>AC</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Initiative (+PB)</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Sneak attack</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Psionic energy dice</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Speed</b></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Used hit-dice</b></div>
+					</div>
+
+						<div class=simplebox>
+						<div class="boxLabelInside"><b>Unearthly Scream</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
+					</div>
+
+					<div class=simplebox>
+						<div class="boxLabelInside"><b>Rabbit Hop</b></div>
+						<div class=simplebox><div class=boxLabelOutside>Max uses</div></div>
+					</div>
+				</div>
+
+				<!-- ATTACKS -->
+				<div class=textbox_big>
+					<div class=boxLabelInside><b>Attacks</b><hr></div>
+					<div style="
+						display: grid;
+						grid-template-columns: 1fr;
+						grid-row-gap: 0.5mm;
+						">
+						<div class=weapon_line_headers>
+							<div class=shaded_text>Weapon name</div>
+							<div class=shaded_text>Atk bonus</div>
+							<div class=shaded_text>Damage/type</div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+						</div>
+						<div class=weapon_line>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>
+							<div class=text_notchedbox></div>	
+						</div>
+					</div>
+				</div><!---->
+
+
+				<div class=shadowbox 
+					style="
+						grid-row-gap: 0.5mm;
+					">
+
+					<div class=boxLabelInside>Sneak Attack</div>
+
+					
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Sneak Attack<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>1</div>
+						<div class=text>You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.
+						You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.
+						The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.
+						</div>
+					</div>
+					
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Cunning Strike<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>5</div>
+						<div class=text>When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. 
+						If a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.
+						Poison (Cost: 1d6). You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.
+						To use this effect, you must have a Poisoner's Kit on your person.
+						Trip (Cost: 1d6). If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.
+						Withdraw (Cost: 1d6). Immediately after the attack, you move up to half your Speed without provoking Opportunity Attacks.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Improved Cunning Strike<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>11</div>
+						<div class=text>You can use up to two Cunning Strike effects when you deal Sneak Attack damage, paying the die cost for each effect.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Devious Strikes<hr></div>
+						<img class=leveltag src="elements/smallbox_4.png">
+						<div class=leveltag_text>14</div>
+						<div class=text>The following effects are now among your Cunning Strike options. Daze (Cost: 2d6). The target must succeed on a Constitution saving throw, or on its next turn, it can do only one of the following: move or take an action or a Bonus Action. Knock Out (Cost: 6d6). The target must succeed on a Constitution saving throw, or it has the Unconscious condition for 1 minute or until it takes any damage. The Unconscious target repeats the save at the end of each of its turns, ending the effect on itself on a success. Obscure (Cost: 3d6). The target must succeed on a Dexterity saving throw, or it has the Blinded condition until the end of its next turn.						</div>
+					</div>
+				</div>
+			</grid-container>
+
+
+			<!-- Column 3 -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 3;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				
+
+				
+
+				<div class=textbox_stacked_top>
+					<div class=boxLabelInside>Weapon Mastery<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>1</div>
+					<div class=text>Your training with weapons allows you to use the mastery properties of two kinds of weapons of your choice with which you have proficiency, such as Daggers and Shortbows.
+					Whenever you finish a Long Rest, you can change the kinds of weapons you chose. For example, you could switch to using the mastery properties of Scimitars and Shortswords.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Cunning Action<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>2</div>
+					<div class=text>Your quick thinking and agility allow you to move and act quickly. On your turn, you can take one of the following actions as a Bonus Action: Dash, Disengage, or Hide.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Psionic Power<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>You regain one of your expended Psionic Energy Dice when you finish a Short Rest, and you regain all of them when you finish a Long Rest.
+Psi-Bolstered Knack. If you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy Die and add the number rolled to the check, potentially turning failure into success. The die is expended only if the roll then succeeds.
+Psychic Whispers. You can establish telepathic communication between yourself and others. As a Magic action, choose one or more creatures you can see, up to a number of creatures equal to your Proficiency Bonus, and then roll one Psionic Energy Die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can end the telepathic connection at any time (no action required).
+The first time you use this power after each Long Rest, you don't expend the Psionic Energy Die. All other times you use the power, you expend the die.
+					</div>
+				</div>
+
+<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Psychic Blades<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>You can manifest shimmering blades of psychic energy. Whenever you take the Attack action or make an Opportunity Attack, you can manifest a Psychic Blade in your free hand and make the attack with that blade. The blade vanishes immediately after it hits or misses its target, and it leaves no mark if it deals damage.
+After you attack with the blade on your turn, you can make a melee or ranged attack with a second psychic blade as a Bonus Action on the same turn if your other hand is free to create it. The damage die of this bonus attack is 1d4 instead of 1d6.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Steady Aim<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>3</div>
+					<div class=text>As a Bonus Action, you give yourself Advantage on your next attack roll on the current turn. You can use this feature only if you haven't moved during this turn, and after you use it, your Speed is 0 until the end of the current turn.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Shadow Magic<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>4</div>
+					<div class=text>Shadow Magic. Choose one level 1 spell from the Illusion or Necromancy school of magic. You always have that spell and the Invisibility spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+					</div>
+				</div>
+
+				
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Uncanny Dodge<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>5</div>
+					<div class=text>When an attacker that you can see hits you with an attack roll, you can take a Reaction to halve the attack's damage against you (round down).
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Evasion<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>You can nimbly dodge out of the way of certain dangers. When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. You can't use this feature if you have the Incapacitated condition.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Reliable Talent<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>7</div>
+					<div class=text>Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Piercer<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>8</div>
+					<div class=text>Puncture. Once per turn, when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.
+Enhanced Critical. When you score a Critical Hit that deals Piercing damage to a creature, you can roll one additional damage die when determining the extra Piercing damage the target takes.
+					</div>
+				</div>
+			</div>
+
+
+			
+
+
+			
+			<!-- end of the box of A4 -->
+		</div>
+	</div>
+
+  <div class="page">
+
+  	<div class=page_cutout
+			style="
+			width: 20.2cm; 
+			height: 28.9cm;
+			display: grid;
+			grid-template-columns: 7fr 8fr 7fr;
+			grid-template-rows: 23mm repeat(5, max-content);
+			grid-auto-flow: column;
+		">
+
+			<!-- This is a box with the size of A4 -->
+
+			
+
+
+			<!-- Column 1 -->
+			<column-container>
+					<!-- MONEY AND TREASURE -->
+					<textbox-big>
+						<boxlabel-inside><b>Money and Treasure</b><hr></boxlabel-inside>
+						<inventory-section height="high" emptyrows=9 header="BODY_BAG_ITEM_COST_WEIGHT" parser="" content=""></inventory-section>
+						
+						<grid-container style="
+							margin-top: 5mm;
+							grid-template-columns: repeat(8, 1fr);
+							grid-template-rows: repeat(1, 1fr);
+						">
+							<money-box>
+								<boxlabel-outside>Copper</boxlabel-outside>
+								<img src="elements/moneybox_cp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Silver</boxlabel-outside>
+								<img src="elements/moneybox_sp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Gold</boxlabel-outside>
+								<img src="elements/moneybox_gp.png">
+							</money-box>
+							<!-- <money-box>
+								<boxlabel-outside>Electrum</boxlabel-outside>
+								<img src="elements/moneybox_ep.png">
+							</money-box> -->
+							<money-box>
+								<boxlabel-outside>Platinum</boxlabel-outside>
+								<img src="elements/moneybox_pp.png">
+							</money-box>
+						</grid-container>
+
+						<grid-container style="
+							grid-template-columns: repeat(8, 1fr);
+							grid-template-rows: repeat(1, 1fr);
+						">
+							<money-box>
+								<boxlabel-outside>Copper</boxlabel-outside>
+								<img src="elements/moneybox_cp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Silver</boxlabel-outside>
+								<img src="elements/moneybox_sp.png">
+							</money-box>
+							<money-box>
+								<boxlabel-outside>Gold</boxlabel-outside>
+								<img src="elements/moneybox_gp.png">
+							</money-box>
+							<!-- <money-box>
+								<boxlabel-outside>Electrum</boxlabel-outside>
+								<img src="elements/moneybox_ep.png">
+							</money-box> -->
+							<money-box>
+								<boxlabel-outside>Platinum</boxlabel-outside>
+								<img src="elements/moneybox_pp.png">
+							</money-box>
+						</grid-container>
+					</textbox-big>
+
+					<!-- MISCELLANEOUS -->
+					<textbox-big>
+						<boxlabel-inside><b>Miscellaneous</b><hr></boxlabel-inside>
+						<inventory-section height="high" header="BODY_BAG_ITEM_COST_WEIGHT" emptyrows=20></inventory-section>
+					</textbox-big>
+
+					<textbox-big><div class=text>
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+					</textbox-big>
+
+					
+				</column-container>
+
+
+			<!-- Column 2 -->
+			<column-container style="grid-row: 1/3;">
+					<!-- CONSUMABLES -->
+					<textbox-big>
+						<boxlabel-inside><b>Consumables</b><hr></boxlabel-inside>
+
+						<inventory-section height="high" header="BODY_BAG_UNIT_ITEM_COST_WEIGHT" parser="UNIT_ITEM_COST_WEIGHT" content="
+						vials
+						Acid
+						25 gp
+						1 lb.
+						vials
+						Alchemist's Fire
+						50 gp
+						1 lb.
+						vials
+						Antitoxin
+						50 gp
+						-
+						pouches
+						Ball Bearings
+						1 gp
+						2 lb.
+						vials
+						Basic Poison
+						100 gp
+						-
+						bags
+						Caltrops
+						1 gp
+						2 lb.
+						uses
+						Healer's Kit
+						5 sp
+						0.3 lb.
+						flasks
+						Holy Water
+						25 gp
+						1 lb.
+						bottles
+						Ink
+						10 gp
+						-
+						flasks
+						Oil
+						1 sp
+						1 lb.
+						vials
+						Perfume
+						5 gp
+						-
+						days
+						Rations
+						5 sp
+						2 lb.
+						feet
+						Rope
+						2 cp
+						⅒ lb.
+						feet
+						String
+						1 cp
+						-
+						gallons
+						Water
+						-
+						8⅓ lb."></inventory-section>						
+					</textbox-big>
+
+
+					<!-- GEAR -->
+					<textbox-big>
+						<boxlabel-inside><b>Gear</b><hr></boxlabel-inside>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" 
+						content_exclude="
+						Acid
+						Alchemist's Fire
+						Antitoxin
+						Ball Bearings
+						Basic Poison
+						Caltrops
+						Healer's Kit
+						Holy Water
+						Ink
+						Oil
+						Perfume
+						Rations
+						Rope
+						String
+
+						Burglar's Pack
+						Diplomat's Pack
+						Dungeoneer's Pack
+						Entertainer's Pack
+						Explorer's Pack
+						Priest's Pack
+						Scholar's Pack
+
+						Book
+
+						Costume
+						Fine Clothes
+						Robe
+						Traveler's Clothes
+
+						Component Pouch
+						Iron Spikes
+						Map
+						Trinket
+						"
+
+						content="
+						Acid
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Alchemist's Fire
+						Adventuring Gear
+						50 gp
+						1 lb.
+						PHB'24
+						Antitoxin
+						Adventuring Gear
+						50 gp
+						—
+						PHB'24
+						Backpack
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Ball Bearings
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Barrel
+						Adventuring Gear
+						2 gp
+						70 lb.
+						PHB'24
+						Basic Poison
+						Adventuring Gear, Poison
+						100 gp
+						—
+						PHB'24
+						Basket
+						Adventuring Gear
+						4 sp
+						2 lb.
+						PHB'24
+						Bedroll
+						Adventuring Gear
+						1 gp
+						7 lb.
+						PHB'24
+						Bell
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Blanket
+						Adventuring Gear
+						5 sp
+						3 lb.
+						PHB'24
+						Block and Tackle
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Book
+						Adventuring Gear
+						25 gp
+						5 lb.
+						PHB'24
+						Bucket
+						Adventuring Gear
+						5 cp
+						2 lb.
+						PHB'24
+						Bullseye Lantern
+						Adventuring Gear
+						10 gp
+						2 lb.
+						PHB'24
+						Burglar's Pack
+						Adventuring Gear
+						16 gp
+						47½ lb.
+						PHB'24
+						Caltrops
+						Adventuring Gear
+						1 gp
+						2 lb.
+						PHB'24
+						Candle
+						Adventuring Gear
+						1 cp
+						—
+						PHB'24
+						Chain
+						Adventuring Gear
+						5 gp
+						10 lb.
+						PHB'24
+						Chest
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Climber's Kit
+						Adventuring Gear
+						25 gp
+						12 lb.
+						PHB'24
+						Component Pouch
+						Adventuring Gear
+						25 gp
+						2 lb.
+						PHB'24
+						Costume
+						Adventuring Gear
+						5 gp
+						4 lb.
+						PHB'24
+						Crossbow Bolt Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Crowbar
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Diplomat's Pack
+						Adventuring Gear
+						39 gp
+						39 lb.
+						PHB'24
+						Dungeoneer's Pack
+						Adventuring Gear
+						12 gp
+						55 lb.
+						PHB'24
+						Entertainer's Pack
+						Adventuring Gear
+						40 gp
+						58½ lb.
+						PHB'24
+						Explorer's Pack
+						Adventuring Gear
+						10 gp
+						55 lb.
+						PHB'24
+						Fine Clothes
+						Adventuring Gear
+						15 gp
+						6 lb.
+						PHB'24
+						Flask
+						Adventuring Gear
+						2 cp
+						1 lb.
+						PHB'24
+						Glass Bottle
+						Adventuring Gear
+						2 gp
+						2 lb.
+						PHB'24
+						Grappling Hook
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Healer's Kit
+						Adventuring Gear
+						5 gp
+						3 lb.
+						PHB'24
+						Holy Water
+						Adventuring Gear
+						25 gp
+						1 lb.
+						PHB'24
+						Hooded Lantern
+						Adventuring Gear
+						5 gp
+						2 lb.
+						PHB'24
+						Hunting Trap
+						Adventuring Gear
+						5 gp
+						25 lb.
+						PHB'24
+						Ink
+						Adventuring Gear
+						10 gp
+						—
+						PHB'24
+						Ink Pen
+						Adventuring Gear
+						2 cp
+						—
+						PHB'24
+						Iron Pot
+						Adventuring Gear
+						2 gp
+						10 lb.
+						PHB'24
+						Iron Spike
+						Adventuring Gear
+						1 sp
+						½ lb.
+						PHB'24
+						Iron Spikes
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Jug
+						Adventuring Gear
+						2 cp
+						4 lb.
+						PHB'24
+						Ladder
+						Adventuring Gear
+						1 sp
+						25 lb.
+						PHB'24
+						Lamp
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Lock
+						Adventuring Gear
+						10 gp
+						1 lb.
+						PHB'24
+						Magnifying Glass
+						Adventuring Gear
+						100 gp
+						—
+						PHB'24
+						Manacles
+						Adventuring Gear
+						2 gp
+						6 lb.
+						PHB'24
+						Map
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Map or Scroll Case
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Mirror
+						Adventuring Gear
+						5 gp
+						½ lb.
+						PHB'24
+						Net
+						Adventuring Gear
+						1 gp
+						3 lb.
+						PHB'24
+						Oil
+						Adventuring Gear
+						1 sp
+						1 lb.
+						PHB'24
+						Paper
+						Adventuring Gear
+						2 sp
+						—
+						PHB'24
+						Parchment
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Perfume
+						Adventuring Gear
+						5 gp
+						—
+						PHB'24
+						Pole
+						Adventuring Gear
+						5 cp
+						7 lb.
+						PHB'24
+						Portable Ram
+						Adventuring Gear
+						4 gp
+						35 lb.
+						PHB'24
+						Pouch
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Priest's Pack
+						Adventuring Gear
+						33 gp
+						29 lb.
+						PHB'24
+						Quiver
+						Adventuring Gear
+						1 gp
+						1 lb.
+						PHB'24
+						Rations
+						Adventuring Gear
+						5 sp
+						2 lb.
+						PHB'24
+						Robe
+						Adventuring Gear
+						1 gp
+						4 lb.
+						PHB'24
+						Rope
+						Adventuring Gear
+						1 gp
+						5 lb.
+						PHB'24
+						Sack
+						Adventuring Gear
+						1 cp
+						½ lb.
+						PHB'24
+						Scholar's Pack
+						Adventuring Gear
+						40 gp
+						22 lb.
+						PHB'24
+						Shovel
+						Adventuring Gear
+						2 gp
+						5 lb.
+						PHB'24
+						Signal Whistle
+						Adventuring Gear
+						5 cp
+						—
+						PHB'24
+						Spyglass
+						Adventuring Gear
+						1,000 gp
+						1 lb.
+						PHB'24
+						String
+						Adventuring Gear
+						1 sp
+						—
+						PHB'24
+						Tent
+						Adventuring Gear
+						2 gp
+						20 lb.
+						PHB'24
+						Tinderbox
+						Adventuring Gear
+						5 sp
+						1 lb.
+						PHB'24
+						Torch
+						Adventuring Gear
+						1 cp
+						1 lb.
+						PHB'24
+						Traveler's Clothes
+						Adventuring Gear
+						2 gp
+						4 lb.
+						PHB'24
+						Trinket
+						Adventuring Gear
+						—
+						—
+						PHB'24
+						Vial
+						Adventuring Gear
+						1 gp
+						—
+						PHB'24
+						Waterskin
+						Adventuring Gear
+						2 sp
+						5 lb.
+						PHB'24"></inventory-section>
+					</textbox-big>
+
+
+					<!-- TOOLS ->
+					<textbox-big>
+						<boxlabel-inside><b>Tools</b><hr></boxlabel-inside>
+
+						<inventory-section height="low" header="BODY_BAG_ITEM_COST_WEIGHT" parser="ITEM_SKIP_COST_WEIGHT_SKIP" content="
+						Alchemist's Supplies
+						Artisan's Tools
+						50 gp
+						8 lb.
+						PHB'24
+						Brewer's Supplies
+						Artisan's Tools
+						20 gp
+						9 lb.
+						PHB'24
+						Calligrapher's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Carpenter's Tools
+						Artisan's Tools
+						8 gp
+						6 lb.
+						PHB'24
+						Cartographer's Tools
+						Artisan's Tools
+						15 gp
+						6 lb.
+						PHB'24
+						Cobbler's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Cook's Utensils
+						Artisan's Tools
+						1 gp
+						8 lb.
+						PHB'24
+						Disguise Kit
+						Tool
+						25 gp
+						3 lb.
+						PHB'24
+						Forgery Kit
+						Tool
+						15 gp
+						5 lb.
+						PHB'24
+						Glassblower's Tools
+						Artisan's Tools
+						30 gp
+						5 lb.
+						PHB'24
+						Herbalism Kit
+						Tool
+						5 gp
+						3 lb.
+						PHB'24
+						Jeweler's Tools
+						Artisan's Tools
+						25 gp
+						2 lb.
+						PHB'24
+						Leatherworker's Tools
+						Artisan's Tools
+						5 gp
+						5 lb.
+						PHB'24
+						Mason's Tools
+						Artisan's Tools
+						10 gp
+						8 lb.
+						PHB'24
+						Navigator's Tools
+						Tool
+						25 gp
+						2 lb.
+						PHB'24
+						Painter's Supplies
+						Artisan's Tools
+						10 gp
+						5 lb.
+						PHB'24
+						Poisoner's Kit
+						Tool
+						50 gp
+						2 lb.
+						PHB'24
+						Potter's Tools
+						Artisan's Tools
+						10 gp
+						3 lb.
+						PHB'24
+						Smith's Tools
+						Artisan's Tools
+						20 gp
+						8 lb.
+						PHB'24
+						Thieves' Tools
+						Tool
+						25 gp
+						1 lb.
+						PHB'24
+						Tinker's Tools
+						Artisan's Tools
+						50 gp
+						10 lb.
+						PHB'24
+						Weaver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Woodcarver's Tools
+						Artisan's Tools
+						1 gp
+						5 lb.
+						PHB'24
+						Three-Dragon Ante Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Playing Cards
+						Gaming Set
+						5 sp
+						—
+						PHB'24
+						Dragonchess Set
+						Gaming Set
+						1 gp
+						—
+						PHB'24
+						Dice Set
+						Gaming Set
+						1 sp
+						—
+						PHB'24"></inventory-section>
+					</textbox-big><!---->
+
+				</column-container>
+
+
+			<!-- Column 3 -->
+			<div class=shadowbox 
+				style="
+					grid-row: 1;
+					grid-column: 3;
+					grid-row-gap: 0.5mm;
+				">
+
+				<div class=boxLabelInside>Class Features</div>
+
+				
+
+				
+	<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Soul Blades<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>9</div>
+					<div class=text>You can now use the following powers with your Psychic Blades.
+Homing Strikes. If you make an attack roll with your Psychic Blade and miss the target, you can roll one Psionic Energy Die and add the number rolled to the attack roll. If this causes the attack to hit, the die is expended.
+Psychic Teleportation. As a Bonus Action, you manifest a Psychic Blade, expend one Psionic Energy Die and roll it, and throw the blade at an unoccupied space you can see up to a number of feet away equal to 10 times the number rolled. You then teleport to that space, and the blade vanishes.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Speedy<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>10</div>
+					<div class=text>Speed Increase. Your Speed increases by 10 feet.
+Dash over Difficult Terrain. When you take the Dash action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.
+Agile Movement. Opportunity Attacks have Disadvantage against you.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_middle>
+					<div class=boxLabelInside>Psychic Veil<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>13</div>
+					<div class=text>You can weave a veil of psychic static to mask yourself. As a Magic action, you gain the Invisible condition for 1 hour or until you dismiss this effect (no action required). This invisibility ends early immediately after you deal damage to a creature or you force a creature to make a saving throw.
+Once you use this feature, you can't do so again until you finish a Long Rest unless you expend a Psionic Energy Die (no action required) to restore your use of it.
+					</div>
+				</div>
+
+				<div class=textbox_stacked_bottom>
+					<div class=boxLabelInside>Slippery Mind<hr></div>
+					<img class=leveltag src="elements/smallbox_4.png">
+					<div class=leveltag_text>15</div>
+					<div class=text>Your cunning mind is exceptionally difficult to control. You gain proficiency in Wisdom and Charisma saving throws.
+					</div>					
+				</div>
+
+				<div class=shadowbox 
+				style="
+					grid-row-gap: 0.5mm;
+				">
+
+					<div class=boxLabelInside>Weapon Mastery</div>
+
+
+					<div class=textbox_stacked_top>
+						<div class=boxLabelInside>Vex<hr></div>
+						<div class=text>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Nick<hr></div>
+						<div class=text>When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_middle>
+						<div class=boxLabelInside>Sap<hr></div>
+						<div class=text>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.
+						</div>
+					</div>
+
+					<div class=textbox_stacked_bottom>
+						<div class=boxLabelInside>Slow<hr></div>
+						<div class=text>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.
+						</div>
+					</div>
+
+						<textbox-big><div class=text>
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+
+
+					</div>
+					</textbox-big>
+				</div>
+			</div>
+
+			
+
+
+			
+
+
+			
+			<!-- end of the box of A4 -->
+		</div>
+	</div>
+
+	<script src="scripts/inventory_sections.js"></script> 
+</body>
+
+</html>
